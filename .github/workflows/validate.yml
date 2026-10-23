@@ -1,0 +1,26 @@
+name: validate-skills
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      # Pin to full commit SHAs in your fork (see defensive-cicd-hardening)
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install pyyaml
+      - name: Lint all skills
+        run: bash tools/check-skill.sh
+      - name: Manifest up to date
+        run: |
+          python3 tools/build_manifest.py
+          git diff --exit-code -- claude-skills.json || (echo "Run tools/build_manifest.py and commit claude-skills.json" && exit 1)

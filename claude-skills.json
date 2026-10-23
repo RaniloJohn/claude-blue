@@ -1,0 +1,584 @@
+{
+  "name": "claude-blue",
+  "description": "Defensive security skills for Claude — SOC, detection engineering, threat hunting, DFIR, hardening.",
+  "license": "MIT",
+  "generated": "2026-10-23",
+  "skill_count": 78,
+  "categories": [
+    "active-directory",
+    "ai",
+    "appsec",
+    "cloud",
+    "container",
+    "core",
+    "cti",
+    "deception",
+    "detection",
+    "email",
+    "endpoint",
+    "forensics",
+    "grc",
+    "hardening",
+    "hunting",
+    "identity",
+    "ir",
+    "malware",
+    "network",
+    "ot",
+    "purple",
+    "siem",
+    "soc",
+    "supply-chain",
+    "utility",
+    "vuln-mgmt",
+    "wireless"
+  ],
+  "skills": [
+    {
+      "name": "defensive-ad-detection",
+      "category": "active-directory",
+      "path": "Skills/active-directory/defensive-ad-detection/SKILL.md",
+      "description": "Detecting Active Directory attacks with DC event logs, Microsoft Defender for Identity, and network telemetry: Kerberoasting, AS-REP roasting, password spraying, DCSync, DCShadow, golden/silver/diamond/sapphire tickets, pass-the-hash/ticket, overpass-the-hash, NTLM relay and coercion (PetitPotam, PrinterBug, DFSCoerce), shadow credentials, RBCD abuse, AD CS abuse (ESC1/ESC8 certificate requests, template changes), GPO abuse, AdminSDHolder and privileged group changes, BloodHound/LDAP reconnaissance, and honey accounts/honeytokens. Use when writing AD detections or investigating domain compromise.",
+      "lines": 157
+    },
+    {
+      "name": "defensive-ad-hardening",
+      "category": "active-directory",
+      "path": "Skills/active-directory/defensive-ad-hardening/SKILL.md",
+      "description": "Active Directory and AD CS hardening: Enterprise Access Model tiering, PAWs, Tier 0 asset inventory (DCs, ADCS, ADFS, Entra Connect, backup, hypervisors), Protected Users, privileged group minimization, AdminSDHolder, ACL attack path reduction (BloodHound, PingCastle, Purple Knight), unconstrained/constrained/RBCD delegation cleanup, ms-DS-MachineAccountQuota, Kerberos AES-only after 2026 RC4 removal, gMSA, krbtgt rotation, LAPS, GPO permissions, trust SID filtering, and AD CS ESC1–ESC16 remediation with strong certificate mapping (KB5014754 full enforcement). Use for AD security assessments and post-compromise hardening.",
+      "lines": 138
+    },
+    {
+      "name": "defensive-ai-security",
+      "category": "ai",
+      "path": "Skills/ai/defensive-ai-security/SKILL.md",
+      "description": "Securing LLM applications and AI agents: OWASP Top 10 for LLM Applications 2025 (prompt injection, sensitive information disclosure, supply chain, data and model poisoning, improper output handling, excessive agency, system prompt leakage, vector and embedding weaknesses, misinformation, unbounded consumption), OWASP Top 10 for Agentic Applications 2026 (ASI01–ASI10: goal hijack, tool misuse, identity and privilege abuse, agentic supply chain, unexpected code execution, memory and context poisoning, insecure inter-agent communication, cascading failures, human-agent trust exploitation, rogue agents), indirect prompt injection defenses, MCP server/tool security, RAG access control, guardrails, logging and detection for AI usage, MITRE ATLAS, and NIST AI RMF. Use when reviewing or monitoring AI features, agents, or AI-assisted SOC tooling.",
+      "lines": 132
+    },
+    {
+      "name": "defensive-api-security",
+      "category": "appsec",
+      "path": "Skills/appsec/defensive-api-security/SKILL.md",
+      "description": "API security defense aligned to OWASP API Security Top 10 (2023): BOLA, broken authentication, BOPLA (excessive data exposure + mass assignment), unrestricted resource consumption, BFLA, unrestricted access to sensitive business flows, SSRF, misconfiguration, improper inventory management (shadow/zombie APIs), and unsafe consumption of third-party APIs. Covers schema validation (OpenAPI), gateway policies (rate limits, quotas, JWT validation, mTLS), GraphQL hardening (depth/complexity limits, introspection), gRPC and WebSocket security, API discovery, logging, and runtime detection. Use when designing, reviewing, or monitoring APIs.",
+      "lines": 144
+    },
+    {
+      "name": "defensive-sast-dast",
+      "category": "appsec",
+      "path": "Skills/appsec/defensive-sast-dast/SKILL.md",
+      "description": "Application security testing in the SDLC: SAST (Semgrep, CodeQL, SonarQube, Bandit, Brakeman, gosec), SCA (Dependabot, Renovate, OSV-Scanner, Trivy, Grype, npm audit, pip-audit), secret scanning (gitleaks, trufflehog, GitHub push protection), IaC scanning (Checkov, tfsec/Trivy config, KICS), DAST (OWASP ZAP baseline/full/API scans, Nuclei), container image scanning, CI integration with SARIF, finding triage and false positive management, severity and reachability prioritization, and custom Semgrep/CodeQL rules. Use when building or tuning an AppSec pipeline or triaging scanner findings.",
+      "lines": 146
+    },
+    {
+      "name": "defensive-secure-code-review",
+      "category": "appsec",
+      "path": "Skills/appsec/defensive-secure-code-review/SKILL.md",
+      "description": "Defensive secure code review mapped to OWASP Top 10:2025 (Broken Access Control incl. SSRF, Security Misconfiguration, Software Supply Chain Failures, Cryptographic Failures, Injection, Insecure Design, Authentication Failures, Software or Data Integrity Failures, Security Logging and Alerting Failures, Mishandling of Exceptional Conditions): root causes and fix patterns for SQL injection, XSS, SSRF, SSTI, XXE, command injection, path traversal, insecure deserialization, IDOR/BOLA, mass assignment, race conditions, open redirects, file upload, and secrets in code, with language-specific safe APIs (Python, Java, C#, JavaScript/TypeScript, PHP, Go). Use when reviewing code, writing remediation guidance, or triaging SAST findings.",
+      "lines": 158
+    },
+    {
+      "name": "defensive-waf",
+      "category": "appsec",
+      "path": "Skills/appsec/defensive-waf/SKILL.md",
+      "description": "Web Application Firewall operations: ModSecurity v3 / Coraza with OWASP Core Rule Set (CRS 4.x), paranoia levels, anomaly scoring and thresholds, false positive tuning with rule exclusions (ctl:ruleRemoveTargetById, SecRuleUpdateTargetById), virtual patching for CVEs, bot and rate limiting, cloud WAFs (AWS WAF managed rule groups, Azure Front Door/Application Gateway WAF, Cloudflare, Akamai), log analysis for attack detection, and common WAF bypass patterns defenders should test (encoding, chunking, JSON/multipart parsing gaps, request smuggling). Use when deploying, tuning, or investigating a WAF.",
+      "lines": 133
+    },
+    {
+      "name": "defensive-aws-security",
+      "category": "cloud",
+      "path": "Skills/cloud/defensive-aws-security/SKILL.md",
+      "description": "AWS security operations and hardening: organization guardrails (SCPs, RCPs, declarative policies), IAM least privilege and access analysis, root account protection, IAM Identity Center, CloudTrail organization trails and data events, GuardDuty (incl. Extended Threat Detection attack sequences, Runtime Monitoring, S3/EKS/RDS/Lambda protection), Security Hub CSPM, Detective, Config, VPC Flow Logs, Route 53 Resolver query logs, IMDSv2 enforcement, S3 Block Public Access, KMS, Secrets Manager, and CloudTrail detection queries for privilege escalation, persistence, defense evasion, and exfiltration. Use for AWS security reviews, detection engineering, and hardening.",
+      "lines": 144
+    },
+    {
+      "name": "defensive-azure-security",
+      "category": "cloud",
+      "path": "Skills/cloud/defensive-azure-security/SKILL.md",
+      "description": "Azure security operations and hardening: management group and subscription design, Azure Policy guardrails, Azure RBAC least privilege and PIM for resources, Defender for Cloud (CSPM, Defender plans for servers, storage, Key Vault, SQL, containers, App Service, Resource Manager), Activity Log and diagnostic settings to Log Analytics/Sentinel, Key Vault security, Storage account hardening (public access, shared keys, SAS), NSGs and Azure Firewall, Bastion/JIT VM access, managed identities, and detections for role assignment abuse, run command, key listing, and data exfiltration. Use for Azure reviews, detection engineering, and hardening.",
+      "lines": 132
+    },
+    {
+      "name": "defensive-cspm",
+      "category": "cloud",
+      "path": "Skills/cloud/defensive-cspm/SKILL.md",
+      "description": "Cloud Security Posture Management and IaC security: open-source scanners (Prowler for AWS/Azure/GCP/Kubernetes/M365, ScoutSuite, Steampipe/Powerpipe, CloudSploit), native CSPM (AWS Security Hub CSPM, Defender for Cloud, Google SCC), CIS Benchmarks and compliance frameworks, IaC scanning (Checkov, Trivy config, KICS, Terrascan) for Terraform/CloudFormation/Bicep/Kubernetes, policy-as-code (OPA/Conftest, Sentinel), attack path and toxic combination prioritization, drift detection, and remediation workflows. Use when assessing cloud posture, building CSPM pipelines, or prioritizing cloud misconfigurations.",
+      "lines": 137
+    },
+    {
+      "name": "defensive-gcp-security",
+      "category": "cloud",
+      "path": "Skills/cloud/defensive-gcp-security/SKILL.md",
+      "description": "Google Cloud security operations and hardening: resource hierarchy (organization, folders, projects), Organization Policy constraints, IAM least privilege (avoid basic roles), service account security (disable key creation, Workload Identity Federation, impersonation monitoring), Cloud Audit Logs (Admin Activity, Data Access, System Event, Policy Denied) and org-level log sinks, Security Command Center (Event Threat Detection, Container Threat Detection, Security Health Analytics), VPC Service Controls, firewall rules and IAP for SSH/RDP, GKE hardening, and detection queries for IAM abuse, key creation, and exfiltration. Use for GCP reviews, detection engineering, and hardening.",
+      "lines": 149
+    },
+    {
+      "name": "defensive-container-hardening",
+      "category": "container",
+      "path": "Skills/container/defensive-container-hardening/SKILL.md",
+      "description": "Container image and runtime hardening for Docker and OCI workloads: minimal/distroless base images, multi-stage builds, non-root users, read-only root filesystems, dropped Linux capabilities, seccomp and AppArmor/SELinux profiles, no privileged containers or host mounts (docker.sock, /, /proc), rootless Docker/Podman, user namespaces, image scanning (Trivy, Grype, Docker Scout), image signing and verification (Sigstore cosign), registry security, Docker daemon hardening (CIS Docker Benchmark, docker-bench-security), and runtime detection with Falco. Use when building images, reviewing Dockerfiles/compose files, or securing container hosts.",
+      "lines": 143
+    },
+    {
+      "name": "defensive-k8s-security",
+      "category": "container",
+      "path": "Skills/container/defensive-k8s-security/SKILL.md",
+      "description": "Kubernetes security hardening and detection: API server and kubelet hardening, RBAC least privilege and dangerous verbs (escalate, bind, impersonate, pods/exec, secrets list), service account token automount, Pod Security Admission (restricted/baseline), admission policies (Kyverno, OPA Gatekeeper, ValidatingAdmissionPolicy/CEL), NetworkPolicy default deny, secrets encryption at rest and external secret stores, etcd protection, image signature verification, audit policy and audit log detections, Falco runtime rules, kube-bench (CIS) and kubescape, and managed cluster specifics (EKS, AKS, GKE). Use for cluster hardening reviews, audit log hunting, and K8s incident response.",
+      "lines": 214
+    },
+    {
+      "name": "claude-blue",
+      "category": "core",
+      "path": "Skills/core/claude-blue/SKILL.md",
+      "description": "Master blue-team skill and router for the claude-blue library. Turns Claude into Claude Blue: SOC L1 triage, L2 incident response and root cause analysis, L3 threat hunting and detection engineering, and DFIR. Use for any defensive security task: alerts, raw logs (EVTX, Sysmon, auditd, macOS unified logs, Zeek, Suricata, firewall, CloudTrail, Entra, GCP audit, Kubernetes audit), detections (Sigma, SPL, KQL, EQL, ES|QL, YARA, YARA-L, Suricata, Wazuh, Falco), hunts, forensic artifacts, vulnerability prioritization (CVSS v4, EPSS, KEV, SSVC), containment, hardening, and reports. Routes to the matching defensive-* skill and enforces evidence-first standards and output templates.",
+      "lines": 320
+    },
+    {
+      "name": "defensive-attack-mapping",
+      "category": "cti",
+      "path": "Skills/cti/defensive-attack-mapping/SKILL.md",
+      "description": "MITRE ATT&CK and D3FEND mapping for detection coverage and defensive architecture: ATT&CK v18 structure (tactics, techniques, sub-techniques, Detection Strategies, Analytics, Data Components — Data Sources deprecated), mapping alerts/rules/incidents to techniques, ATT&CK Navigator layers, coverage heatmaps and scoring, DeTT&CT, prioritizing gaps by threat relevance, MITRE ATT&CK for ICS and Mobile, MITRE ATLAS for AI, and D3FEND 1.0 defensive technique mapping. Use when building coverage reports, mapping detections, or justifying security investments.",
+      "lines": 147
+    },
+    {
+      "name": "defensive-cti",
+      "category": "cti",
+      "path": "Skills/cti/defensive-cti/SKILL.md",
+      "description": "Cyber threat intelligence for SOC and detection teams: intelligence lifecycle (direction, collection, processing, analysis, dissemination, feedback), Priority Intelligence Requirements (PIRs), strategic/operational/tactical intel, Diamond Model, Cyber Kill Chain, ATT&CK-based TTP extraction from reports, source evaluation (Admiralty/NATO code), confidence language (estimative probability), TLP 2.0, actor tracking and naming, attribution caution, and writing intel products that drive hunts and detections. Use when analyzing a threat report, building an actor profile, or producing intel for stakeholders.",
+      "lines": 156
+    },
+    {
+      "name": "defensive-ioc-management",
+      "category": "cti",
+      "path": "Skills/cti/defensive-ioc-management/SKILL.md",
+      "description": "Indicator of compromise lifecycle and threat intel platform operations: IOC types and Pyramid of Pain, quality scoring, deduplication, aging and expiry, allowlisting (CDNs, cloud ranges, popular domains) to prevent self-inflicted outages, MISP (events, attributes, galaxies, warning lists, sightings, feeds) and OpenCTI (STIX 2.1 knowledge graph, connectors), STIX/TAXII, pushing IOCs to SIEM/EDR/firewall/DNS, retro-hunting, defanging, and sharing with communities under TLP. Use when ingesting, curating, distributing, or hunting with indicators.",
+      "lines": 165
+    },
+    {
+      "name": "defensive-deception",
+      "category": "deception",
+      "path": "Skills/deception/defensive-deception/SKILL.md",
+      "description": "Deception engineering for high-fidelity detection: honeytokens (fake credentials, AWS/API canary keys, honey documents, DNS and URL canaries, database honey records), Canarytokens, honey accounts and SPNs in Active Directory, honey AD CS templates, decoy shares and files, honeypots (OpenCanary, T-Pot, Cowrie, Dionaea, Conpot), placement strategy along attack paths, alert routing, MITRE ENGAGE planning, legal/ethical considerations, and avoiding self-inflicted false positives. Use when designing deception or adding near-zero-false-positive tripwires.",
+      "lines": 127
+    },
+    {
+      "name": "defensive-detection-as-code",
+      "category": "detection",
+      "path": "Skills/detection/defensive-detection-as-code/SKILL.md",
+      "description": "Detection-as-Code (DaC) engineering lifecycle: version-controlled detection repos, rule schemas, peer review, unit tests with true/false positive samples, CI/CD pipelines (GitHub Actions, GitLab CI) that lint, convert, and deploy Sigma/SPL/KQL/EQL/Wazuh/YARA rules via API, staging (log-only) promotion, detection metadata, ATT&CK v18 coverage tracking, detection quality metrics, and continuous validation with Atomic Red Team. Use when building or reviewing a detection engineering program or pipeline.",
+      "lines": 174
+    },
+    {
+      "name": "defensive-query-languages",
+      "category": "detection",
+      "path": "Skills/detection/defensive-query-languages/SKILL.md",
+      "description": "Security query language translation and optimization across SIEM/XDR platforms: Splunk SPL (tstats, datamodels, stats, transaction, streamstats), Microsoft KQL for Sentinel and Defender XDR advanced hunting (summarize, join, make_set, parse_json, series_decompose_anomalies), Elastic EQL (sequence, until, maxspan), ES|QL, Lucene/KQL (Kibana), Wazuh rule XML, Graylog query syntax, Google SecOps YARA-L/UDM search, and AWS Athena SQL over CloudTrail. Use when translating a detection between platforms, writing hunts, fixing slow queries, or explaining query output.",
+      "lines": 203
+    },
+    {
+      "name": "defensive-sigma",
+      "category": "detection",
+      "path": "Skills/detection/defensive-sigma/SKILL.md",
+      "description": "Sigma detection rule engineering. Use when writing, reviewing, converting, or tuning Sigma rules; choosing logsource product/category/service; using modifiers (contains, startswith, endswith, all, re, cidr, windash, base64offset, fieldref, exists, gt/lt); writing Sigma correlation rules (event_count, value_count, temporal, temporal_ordered) and Sigma filters; converting with pySigma/sigma-cli to Splunk SPL, Microsoft Sentinel/Defender KQL (kusto backend, microsoft_xdr / sentinel_asim pipelines), Elastic Lucene/EQL/ES|QL, QRadar, Wazuh; and running Sigma directly on EVTX with Hayabusa or Chainsaw.",
+      "lines": 230
+    },
+    {
+      "name": "defensive-suricata-snort",
+      "category": "detection",
+      "path": "Skills/detection/defensive-suricata-snort/SKILL.md",
+      "description": "Network IDS/IPS signature engineering and operations for Suricata (7.x/8.x) and Snort 3. Use when writing or tuning Suricata/Snort rules, using sticky buffers (http.uri, http.host, http.user_agent, tls.sni, dns.query, ja4.hash), flow/flowbits/xbits, thresholds and suppress, datasets, transforms (from_base64, entropy), Lua; deploying ET Open / Talos rulesets with suricata-update; analyzing eve.json alerts; running IPS mode; Suricata 8 firewall mode; and validating rules with suricata -T.",
+      "lines": 157
+    },
+    {
+      "name": "defensive-yara",
+      "category": "detection",
+      "path": "Skills/detection/defensive-yara/SKILL.md",
+      "description": "YARA and YARA-X rule writing for malware detection, threat hunting, and file/memory scanning. Use when writing or reviewing YARA rules, choosing strings (text, hex, regex, wide, nocase, xor, base64), building conditions with magic bytes, filesize, and modules (pe, elf, macho, dotnet, math, hash, lnk, dex), avoiding slow atoms, testing against goodware, migrating to YARA-X (yr check, yr fmt, stricter parsing), scanning memory dumps or Velociraptor/THOR/Loki/EDR integrations, and writing YARA-L 2.0 for Google SecOps.",
+      "lines": 171
+    },
+    {
+      "name": "defensive-email-auth",
+      "category": "email",
+      "path": "Skills/email/defensive-email-auth/SKILL.md",
+      "description": "Email authentication and domain anti-spoofing: SPF (mechanisms, 10-lookup limit, ~all vs -all), DKIM (selectors, 2048-bit keys, rotation), DMARC per DMARCbis RFC 9989/9990/9991 (May 2026: p/sp/np, t= testing flag replacing pct, DNS tree walk replacing PSL, rua aggregate reports, adkim/aspf alignment), ARC, MTA-STS and TLS-RPT, DANE, BIMI, bulk sender requirements (Google, Yahoo, Microsoft), parked-domain protection, rollout from p=none to p=reject, and reading aggregate reports. Use when configuring email authentication, investigating spoofing, or interpreting DMARC/SPF/DKIM results in headers.",
+      "lines": 134
+    },
+    {
+      "name": "defensive-phishing-triage",
+      "category": "email",
+      "path": "Skills/email/defensive-phishing-triage/SKILL.md",
+      "description": "Phishing email triage and response for SOC analysts: user-reported phish workflow, header analysis (Received chain, Return-Path, Reply-To, Authentication-Results, ARC), URL analysis (redirect chains, AiTM phishing kits like Evilginx/Tycoon-style, QR code phishing, CAPTCHA-gated pages, legitimate-service abuse), attachment triage, sandboxing with data-sharing caution, determining clicks/credential entry/execution, tenant-wide search and purge (Defender Threat Explorer, compliance search, Google Workspace investigation tool), blocking, user notification, and metrics. Use when handling reported or detected phishing.",
+      "lines": 150
+    },
+    {
+      "name": "defensive-edr-tuning",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-edr-tuning/SKILL.md",
+      "description": "EDR operations and resilience: sensor coverage and health, tamper protection, exclusion governance and review (dangerous path/process exclusions), detecting EDR evasion and killing (BYOVD drivers, service stops, uninstall attempts, firewall rules blocking EDR cloud, WFP filters, ETW/AMSI patching, direct/indirect syscalls, unhooking), telemetry gap analysis, prevention vs detection modes, custom IOAs/indicators, and live response governance for Microsoft Defender for Endpoint, CrowdStrike Falcon, SentinelOne, Elastic Defend, and similar. Use when tuning an EDR, reviewing exclusions, or investigating EDR blind spots.",
+      "lines": 127
+    },
+    {
+      "name": "defensive-linux-telemetry",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-linux-telemetry/SKILL.md",
+      "description": "Linux security telemetry and detection: auditd rules and syscall auditing (execve, ptrace, module load, identity files), audit log parsing (ausearch, aureport, laurel for JSON), eBPF sensors (Falco, Tetragon TracingPolicy, Tracee, bcc tools), Sysmon for Linux, osquery, journald/rsyslog/auth.log/PAM, detecting reverse shells, privilege escalation, persistence (cron/systemd/ssh keys/ld.so.preload), container and namespace escape, cryptominers, and web shells. Use when instrumenting Linux servers or writing Linux detections.",
+      "lines": 179
+    },
+    {
+      "name": "defensive-sysmon",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-sysmon/SKILL.md",
+      "description": "Sysmon deployment, configuration, and detection engineering on Windows and Linux: event IDs 1–29 and their detection value, schema versions, config design (include/exclude, RuleGroup, condition operators), SwiftOnSecurity and olafhartong sysmon-modular baselines, high-value event 10 (ProcessAccess) and 7 (ImageLoad) targeting, DNS (22), named pipes (17/18), WMI (19–21), file delete archiving (23), FileExecutableDetected (29), native built-in Sysmon on Windows 11, Sysmon for Linux, deployment at scale, tamper monitoring, and volume control. Use when configuring Sysmon or writing detections on Sysmon data.",
+      "lines": 193
+    },
+    {
+      "name": "defensive-windows-event-logs",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-windows-event-logs/SKILL.md",
+      "description": "Windows Event Log reference and analysis for detection and IR: Security, System, PowerShell, Task Scheduler, WMI-Activity, TerminalServices, WinRM, BITS, Defender, NTLM, Kerberos (KDCSVC) channels; key event IDs (4624/4625 logon types, 4648, 4672, 4688, 4697, 4698, 4720, 4728/4732/4756, 4740, 4662 DCSync GUIDs, 4768/4769/4771/4776, 5136, 5140/5145, 1102, 7045, 4104); Kerberos and NTLM authentication analysis; RPC and named pipes; ETW providers and AMSI; and parsing with EvtxECmd, Hayabusa, Chainsaw, Get-WinEvent. Use when interpreting Windows logs or choosing which events to collect.",
+      "lines": 184
+    },
+    {
+      "name": "defensive-windows-hardening",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-windows-hardening/SKILL.md",
+      "description": "Windows endpoint and server hardening mapped to attacker techniques: Attack Surface Reduction (ASR) rules, Microsoft Defender configuration, App Control for Business (WDAC) and AppLocker, LSA protection (RunAsPPL), Credential Guard, HVCI/memory integrity and the Vulnerable Driver Blocklist, Windows LAPS, removing local admin, PowerShell Constrained Language Mode and logging, SMB signing/SMBv1 removal, LLMNR/NBT-NS/WPAD disablement, LDAP signing and channel binding, RDP hardening, BitLocker, Windows Firewall, and CIS/Microsoft security baselines. Use when hardening Windows fleets or recommending preventive controls after an incident.",
+      "lines": 150
+    },
+    {
+      "name": "defensive-linux-forensics",
+      "category": "forensics",
+      "path": "Skills/forensics/defensive-linux-forensics/SKILL.md",
+      "description": "Linux host forensics and compromise assessment: triage collection with UAC, auth.log/secure and journald analysis, wtmp/btmp/lastlog, shell histories, auditd/ausearch, cron/systemd/rc/profile persistence, SSH authorized_keys, ld.so.preload and PAM backdoors, kernel modules/rootkits, deleted-but-running binaries, /proc analysis, package integrity (debsums, rpm -Va), web shells, container escapes, file timeline with find/stat/debugfs, ext4 crtime, and memory with avml + Volatility 3 linux plugins. Use for investigating compromised Linux servers and cloud instances.",
+      "lines": 159
+    },
+    {
+      "name": "defensive-macos-forensics",
+      "category": "forensics",
+      "path": "Skills/forensics/defensive-macos-forensics/SKILL.md",
+      "description": "macOS forensics and endpoint telemetry: Unified Logging System (log show/collect predicates, .logarchive), Endpoint Security Framework events via eslogger, Background Task Management (sfltool dumpbtm), LaunchAgents/LaunchDaemons and login items, TCC.db privacy grants, quarantine events and Gatekeeper/XProtect, KnowledgeC/Biome, FSEvents, Spotlight, shell histories, configuration profiles, authorization plugins, APFS snapshots, and triage with Aftermath or UAC. Use for investigating compromised Macs, infostealer infections, and macOS detection engineering.",
+      "lines": 141
+    },
+    {
+      "name": "defensive-memory-forensics",
+      "category": "forensics",
+      "path": "Skills/forensics/defensive-memory-forensics/SKILL.md",
+      "description": "Memory forensics with Volatility 3 (parity release May 2025; Volatility 2 deprecated): acquisition, symbol tables, Windows plugins (info, pslist, psscan, pstree, cmdline, dlllist, ldrmodules, malfind, vadinfo, handles, netscan, svcscan, filescan, dumpfiles, registry.hivelist/printkey, getsids, privileges, vadyarascan), Linux plugins, detecting process hollowing, injection, unlinked DLLs, unbacked executable memory, hidden processes, credential artifacts, and memory-resident malware; plus MemProcFS. Use when analyzing RAM images or EDR memory dumps.",
+      "lines": 154
+    },
+    {
+      "name": "defensive-timeline-analysis",
+      "category": "forensics",
+      "path": "Skills/forensics/defensive-timeline-analysis/SKILL.md",
+      "description": "Forensic timeline construction and analysis: super-timelines with Plaso (log2timeline, psort, pinfo), Timesketch collaborative analysis, EZ Tools + Timeline Explorer CSV timelines, Hayabusa/Chainsaw EVTX timelines, merging host, network, identity, and cloud logs, UTC normalization and clock skew, anchor-and-pivot methodology, MACB semantics, filtering noise, pivot points, and producing a defensible incident narrative with root cause and dwell time. Use when reconstructing what happened across one or many systems.",
+      "lines": 138
+    },
+    {
+      "name": "defensive-windows-forensics",
+      "category": "forensics",
+      "path": "Skills/forensics/defensive-windows-forensics/SKILL.md",
+      "description": "Windows disk and artifact forensics: what each artifact proves (execution vs existence vs access), parsing with KAPE and Eric Zimmerman tools (MFTECmd, PECmd, AmcacheParser, AppCompatCacheParser, RECmd, SBECmd, LECmd, JLECmd, EvtxECmd, SrumECmd, Timeline Explorer), $MFT and $UsnJrnl:$J, timestomping detection ($SI vs $FN), Prefetch, Amcache, Shimcache, BAM/DAM, UserAssist, ShellBags, LNK/Jump Lists, SRUM, registry hives, Recycle Bin, Volume Shadow Copies, browser history, and EVTX. Use for host-based DFIR, execution validation, and root cause analysis on Windows.",
+      "lines": 136
+    },
+    {
+      "name": "defensive-frameworks",
+      "category": "grc",
+      "path": "Skills/grc/defensive-frameworks/SKILL.md",
+      "description": "Security framework mapping and control alignment for security teams: NIST CSF 2.0 (Govern, Identify, Protect, Detect, Respond, Recover), CIS Critical Security Controls v8.1 and Implementation Groups, ISO/IEC 27001:2022 and 27002 Annex A (93 controls, 4 themes), NIST SP 800-53 Rev. 5, PCI DSS v4.0.1, SOC 2, NIS2, DORA, EU Cyber Resilience Act, Philippine Data Privacy Act/NPC, and mapping SOC capabilities (logging, detection, IR, vulnerability management) to framework requirements and evidence. Use when aligning security operations to frameworks, preparing audit evidence, or prioritizing controls.",
+      "lines": 126
+    },
+    {
+      "name": "defensive-risk-threat-modeling",
+      "category": "grc",
+      "path": "Skills/grc/defensive-risk-threat-modeling/SKILL.md",
+      "description": "Threat modeling and cyber risk assessment for defenders: STRIDE and STRIDE-per-element on data flow diagrams, attack trees, PASTA, LINDDUN (privacy), kill-chain/ATT&CK-based threat modeling, trust boundaries, abuse cases, control selection mapped to D3FEND, risk registers with likelihood/impact and FAIR-style quantification basics, risk treatment (mitigate, transfer, accept, avoid), residual risk, and communicating risk to leadership. Use when threat modeling a system or feature, building a risk register, or justifying security investments.",
+      "lines": 139
+    },
+    {
+      "name": "defensive-linux-hardening",
+      "category": "hardening",
+      "path": "Skills/hardening/defensive-linux-hardening/SKILL.md",
+      "description": "Linux server hardening mapped to attacker techniques: CIS Benchmarks and DISA STIGs, OpenSCAP/Lynis auditing, SSH hardening (key-only, no root login, modern ciphers, MFA, certificate auth), sudo policy, PAM and password policy, account hygiene, file permissions and SUID/SGID review, kernel sysctl hardening, mount options (noexec/nosuid/nodev), SELinux/AppArmor enforcing, firewall (nftables, firewalld, ufw), service minimization, automatic security updates, auditd and remote logging, AIDE file integrity, and container host specifics. Use when hardening Linux or remediating findings after a Linux compromise.",
+      "lines": 168
+    },
+    {
+      "name": "defensive-network-device-hardening",
+      "category": "hardening",
+      "path": "Skills/hardening/defensive-network-device-hardening/SKILL.md",
+      "description": "Router, switch, and firewall management-plane and control-plane hardening on Cisco IOS/IOS-XE and Huawei VRP: AAA with TACACS+/RADIUS and local fallback, SSHv2 only with strong crypto, disabling Telnet/HTTP/unused services, management ACLs and VTY restrictions, SNMPv3 authPriv, NTP authentication, centralized logging with timestamps, login banners and lockouts, password encryption (type 8/9 secrets), Control Plane Policing (CoPP), routing protocol authentication (OSPF/BGP/EIGRP), uRPF, configuration archive and change detection, firmware integrity verification, and Cisco Smart Install/legacy exposure. Use when hardening network infrastructure or auditing device configs.",
+      "lines": 213
+    },
+    {
+      "name": "defensive-hunt-network",
+      "category": "hunting",
+      "path": "Skills/hunting/defensive-hunt-network/SKILL.md",
+      "description": "Network threat hunting for command-and-control, exfiltration, and lateral movement using Zeek, Suricata EVE, NetFlow/IPFIX, proxy, DNS resolver, and firewall logs. Covers beacon detection (interval, jitter, coefficient of variation, RITA), long connections, DNS tunneling and DGA (label length, entropy, NXDOMAIN rate, TXT volume), rare destinations/ASNs, newly registered domains, TLS fingerprinting (JA4/JA4S, JA3), self-signed and short-lived certificates, data volume asymmetry, cloud storage exfil, internal scanning, SMB/RDP/WinRM east-west anomalies, and DoH/proxy evasion.",
+      "lines": 180
+    },
+    {
+      "name": "defensive-hunt-windows",
+      "category": "hunting",
+      "path": "Skills/hunting/defensive-hunt-windows/SKILL.md",
+      "description": "Windows endpoint threat hunting playbooks with ready queries (SPL, KQL, EQL) over Sysmon, Security EVTX, PowerShell 4104, and EDR telemetry. Covers anomalous parent-child process lineage, LOLBins (rundll32, regsvr32, mshta, certutil, bitsadmin, msbuild, installutil, wmic), encoded/obfuscated PowerShell, persistence (Run keys, services, scheduled tasks, WMI subscriptions, COM hijacking, IFEO), credential access (LSASS, SAM, NTDS, DPAPI, browser stores), process injection and unbacked memory, DLL sideloading, BYOVD drivers, lateral movement artifacts, and defense evasion (log clearing, Defender exclusions, AMSI/ETW tampering).",
+      "lines": 203
+    },
+    {
+      "name": "defensive-threat-hunting",
+      "category": "hunting",
+      "path": "Skills/hunting/defensive-threat-hunting/SKILL.md",
+      "description": "Threat hunting methodology and program design: PEAK framework (hypothesis-driven, baseline/exploratory, model-assisted M-ATH), TaHiTI (intel-driven), Hunting Maturity Model, Pyramid of Pain, hypothesis writing, data source readiness, stacking/long-tail analysis, frequency and temporal analysis, behavioral baselining, anomaly detection, hunt documentation, and converting hunts into detections. Use when planning or running a hunt, writing hunt hypotheses, building a hunt backlog from threat intel or ATT&CK, or reporting hunt outcomes.",
+      "lines": 149
+    },
+    {
+      "name": "defensive-auth-implementation",
+      "category": "identity",
+      "path": "Skills/identity/defensive-auth-implementation/SKILL.md",
+      "description": "Secure authentication and authorization implementation review for applications and APIs: OAuth 2.0 / OAuth 2.1 and OpenID Connect (authorization code + PKCE, exact redirect URI matching, state/nonce, token audience/issuer validation, refresh token rotation, DPoP/mTLS sender-constrained tokens), JWT validation (algorithm pinning, alg:none and key confusion prevention, kid/jku/x5u handling, JWKS rotation, exp/nbf/iat), SAML signature validation and XML wrapping defenses, session management and cookies, passkeys/WebAuthn, password storage (Argon2id, bcrypt), MFA, and logging. Use when reviewing auth code, designing SSO, or remediating JWT/OAuth findings.",
+      "lines": 151
+    },
+    {
+      "name": "defensive-entra-id",
+      "category": "identity",
+      "path": "Skills/identity/defensive-entra-id/SKILL.md",
+      "description": "Microsoft Entra ID (Azure AD) security operations and hardening: Conditional Access design, phishing-resistant MFA (FIDO2/passkeys, WHfB, CBA), authentication strengths, Privileged Identity Management (PIM), Identity Protection risk policies, Token Protection and Continuous Access Evaluation against token theft/AiTM, workload identity and service principal security, app consent governance, cross-tenant access, Entra Connect/Cloud Sync as Tier 0, break-glass accounts, and detection with SigninLogs, AADNonInteractiveUserSignInLogs, AuditLogs, and Graph activity logs. Use for Entra hardening reviews, identity detections, and cloud identity incident response.",
+      "lines": 140
+    },
+    {
+      "name": "defensive-bec-response",
+      "category": "ir",
+      "path": "Skills/ir/defensive-bec-response/SKILL.md",
+      "description": "Business Email Compromise and Microsoft 365 / Google Workspace account takeover response: AiTM phishing and token theft, malicious inbox rules (delete, move to RSS/Archive, forward), external forwarding, OAuth consent phishing, MFA method registration by attacker, MailItemsAccessed scoping, Unified Audit Log and Sentinel/Defender hunting, session and token revocation, payment fraud recall, and post-incident hardening (phishing-resistant MFA, token protection, CA policies). Use when a mailbox or cloud identity is suspected compromised or a fraudulent payment request is reported.",
+      "lines": 134
+    },
+    {
+      "name": "defensive-cloud-ir",
+      "category": "ir",
+      "path": "Skills/ir/defensive-cloud-ir/SKILL.md",
+      "description": "Cloud incident response for AWS, Azure, and GCP: leaked access keys, compromised IAM users/roles/service principals/service accounts, instance compromise, S3/Blob/GCS data exposure, cryptomining, logging tampering, and attack-sequence findings (GuardDuty Extended Threat Detection). Covers preserving cloud evidence (CloudTrail, Activity/Entra logs, Cloud Audit Logs, snapshots), credential revocation including AWS role session revocation, isolation security groups, forensic snapshots, scoping attacker-created resources, and recovery. Use when responding to any cloud control-plane or workload compromise.",
+      "lines": 151
+    },
+    {
+      "name": "defensive-incident-response",
+      "category": "ir",
+      "path": "Skills/ir/defensive-incident-response/SKILL.md",
+      "description": "Incident response lifecycle and incident command for SOC L2/IR leads, aligned to NIST SP 800-61r3 (2025) and CSF 2.0. Use when an incident is declared or suspected: scoping and blast-radius mapping, evidence preservation and chain of custody, containment strategy selection (and tipping-off risk), eradication, recovery, root cause analysis, dwell time, incident command roles, war-room cadence, stakeholder updates, and lessons learned. Covers host, identity, network, cloud, and email containment options with blast radius and reversibility.",
+      "lines": 170
+    },
+    {
+      "name": "defensive-live-response",
+      "category": "ir",
+      "path": "Skills/ir/defensive-live-response/SKILL.md",
+      "description": "Live response and remote forensic collection at scale: Velociraptor (VQL hunts, artifacts, offline collectors), EDR live response consoles (Defender, CrowdStrike RTR, SentinelOne), KAPE triage, UAC for Linux/macOS, memory acquisition (WinPmem, DumpIt, avml, LiME), volatile data commands for Windows/Linux, evidence integrity, and safe remote collection without tipping off the adversary. Use when collecting evidence from live systems, running fleet-wide hunts for an IOC, or building an offline collector for an isolated host.",
+      "lines": 156
+    },
+    {
+      "name": "defensive-ransomware-response",
+      "category": "ir",
+      "path": "Skills/ir/defensive-ransomware-response/SKILL.md",
+      "description": "Ransomware incident response and preparedness: precursor detection (initial access brokers, RMM abuse, AD recon, credential dumping, backup deletion, security tool disabling), early-warning indicators (vssadmin/wbadmin/bcdedit, mass file renames, ransom note creation, ESXi encryption), immediate containment and segment isolation, backup protection, encryption scope assessment, data-theft/double-extortion assessment, recovery sequencing (identity first), decryptor checks, legal/regulatory and payment considerations, and hardening to prevent recurrence. Use during an active ransomware event, tabletop, or readiness review.",
+      "lines": 143
+    },
+    {
+      "name": "defensive-dynamic-analysis",
+      "category": "malware",
+      "path": "Skills/malware/defensive-dynamic-analysis/SKILL.md",
+      "description": "Dynamic malware analysis and sandboxing for defenders: building a safe detonation lab (isolation, snapshots, fake network with INetSim/FakeNet-NG), monitoring with Procmon, Process Explorer/System Informer, Sysmon, Regshot, Wireshark/tcpdump, API monitoring, capturing dropped files and memory, anti-analysis/evasion awareness, automated sandboxes (CAPE, Joe Sandbox, ANY.RUN, Hybrid Analysis, Triage) with data-sharing cautions, and converting observed behavior into detections and IOCs. Use when static triage is insufficient and behavior must be observed.",
+      "lines": 131
+    },
+    {
+      "name": "defensive-maldoc-analysis",
+      "category": "malware",
+      "path": "Skills/malware/defensive-maldoc-analysis/SKILL.md",
+      "description": "Malicious document and initial-access container analysis: Office OLE/OOXML VBA macros, XLM 4.0, remote template injection, OLE objects, RTF exploits, PDFs with JavaScript/launch actions, LNK shortcuts, ISO/IMG/VHD containers and Mark-of-the-Web bypass, OneNote embedded files, HTML smuggling, SVG and HTA payloads, CHM, MSI, and archive tricks. Uses oletools (olevba, oleid, rtfobj, oleobj, mraptor), oledump.py, pdfid/pdf-parser, LECmd, and CyberChef. Use when triaging phishing attachments and downloaded lures.",
+      "lines": 145
+    },
+    {
+      "name": "defensive-malware-triage",
+      "category": "malware",
+      "path": "Skills/malware/defensive-malware-triage/SKILL.md",
+      "description": "Static malware triage for SOC/IR analysts: safe handling, hashing, file type identification (magic bytes, DIE/TrID), PE/ELF/Mach-O structure (imports, sections, entropy, timestamps, Rich header, signatures, overlay), strings and FLOSS for obfuscated strings, capa capability detection, packer identification, .NET and script deobfuscation (PowerShell, JS, VBA), config extraction, reputation lookups, and turning findings into IOCs, YARA, and detections. Use when a suspicious file, attachment, or dropped binary needs a fast verdict and indicators without full reverse engineering.",
+      "lines": 176
+    },
+    {
+      "name": "defensive-firewall-analysis",
+      "category": "network",
+      "path": "Skills/network/defensive-firewall-analysis/SKILL.md",
+      "description": "Firewall, router, and flow log analysis plus rule-base review: Palo Alto PAN-OS (traffic/threat/URL/GlobalProtect logs, App-ID, security policy), Fortinet FortiGate (traffic/utm/event logs, policy IDs), Cisco Secure Firewall ASA/FTD syslog message IDs, pfSense/OPNsense filterlog, NetFlow/IPFIX with nfdump, VPN logs, and detection use cases (C2 egress, port scans, brute force against VPN, data exfil, policy bypass, denied-then-allowed). Also rule-base hygiene: any-any rules, shadowed/redundant rules, unused rules by hit count, risky services, and change monitoring. Use when investigating with firewall/flow data or auditing firewall policy.",
+      "lines": 127
+    },
+    {
+      "name": "defensive-l2-security",
+      "category": "network",
+      "path": "Skills/network/defensive-l2-security/SKILL.md",
+      "description": "Layer 2 and campus access-layer security on Cisco IOS/IOS-XE and Huawei VRP: DHCP snooping, Dynamic ARP Inspection, IP Source Guard, port security (sticky MAC, violation modes), BPDU Guard/BPDU protection, Root Guard, Loop Guard, storm control, VLAN hopping prevention (DTP off, native VLAN, trunk pruning), private VLANs, IPv6 First Hop Security (RA Guard, DHCPv6 Guard), 802.1X/MAB NAC with RADIUS (ISE, NPS, FreeRADIUS), plus detection of ARP spoofing, rogue DHCP, LLMNR/NBT-NS/mDNS poisoning, and MAC flooding. Use when hardening switches or investigating LAN attacks.",
+      "lines": 191
+    },
+    {
+      "name": "defensive-network-segmentation",
+      "category": "network",
+      "path": "Skills/network/defensive-network-segmentation/SKILL.md",
+      "description": "Network segmentation and zero trust network design for defenders: zone and trust-level modeling, VLAN/VRF design, ACL design and placement (standard vs extended, inbound vs outbound), Cisco IOS and Huawei VRP ACL examples, role-based segmentation for campus networks, east-west restriction (workstation-to-workstation SMB/RDP/WinRM), admin jump hosts/PAWs, DMZ design, microsegmentation (host firewalls, SDN, Kubernetes NetworkPolicy), ZTNA replacing VPN, NIST SP 800-207 and CISA Zero Trust Maturity Model, and validating segmentation with testing. Use when designing, reviewing, or troubleshooting segmentation and ACL policies.",
+      "lines": 156
+    },
+    {
+      "name": "defensive-pcap-analysis",
+      "category": "network",
+      "path": "Skills/network/defensive-pcap-analysis/SKILL.md",
+      "description": "Packet capture and analysis for incident response and network forensics: capture strategy (tcpdump, dumpcap, Arkime/full PCAP, ring buffers, BPF filters), Wireshark/tshark display filters and statistics (Conversations, Endpoints, Protocol Hierarchy, IO graphs), following streams, exporting objects, TLS decryption with SSLKEYLOGFILE, analyzing DNS, HTTP, TLS, SMB2, Kerberos, NTLM, LDAP, RDP, and ICMP; carving files; NetworkMiner; Zeek/Suricata replay of PCAP; and identifying C2, exfiltration, scanning, and lateral movement in captures. Use when given a PCAP or deciding how to capture traffic.",
+      "lines": 134
+    },
+    {
+      "name": "defensive-zeek",
+      "category": "network",
+      "path": "Skills/network/defensive-zeek/SKILL.md",
+      "description": "Zeek network security monitoring (7.x/8.x): sensor deployment and cluster layout, log types and fields (conn, dns, http, ssl, x509, files, smb_files, smb_mapping, dce_rpc, kerberos, ntlm, rdp, ssh, notice, weird, software, known_*), conn_state and history interpretation, zeek-cut and jq analysis, Community ID, packages via zkg (JA4, HASSH, community-id, ja3), Intel framework for IOC matching, writing Zeek scripts for detections, file extraction, and RITA integration. Use when operating Zeek or hunting/investigating with Zeek logs.",
+      "lines": 159
+    },
+    {
+      "name": "defensive-ics-security",
+      "category": "ot",
+      "path": "Skills/ot/defensive-ics-security/SKILL.md",
+      "description": "Industrial control system and operational technology (OT) defense: Purdue model and IEC 62443 zones and conduits, IT/OT DMZ design, asset inventory via passive monitoring, OT network security monitoring (Zeek ICS parsers, Suricata, Malcolm, commercial OT NDR), industrial protocols (Modbus/TCP, DNP3, IEC 61850/104, S7comm, EtherNet/IP-CIP, BACnet, OPC UA) and abnormal function codes, MITRE ATT&CK for ICS, safe vulnerability management in OT, remote access hardening, OT incident response with safety priorities, and building management/IoT segments. Use for OT security architecture, monitoring, and incident response.",
+      "lines": 124
+    },
+    {
+      "name": "defensive-adversary-emulation",
+      "category": "purple",
+      "path": "Skills/purple/defensive-adversary-emulation/SKILL.md",
+      "description": "Threat-informed adversary emulation planning for defenders: building emulation plans from CTI (actor selection, technique extraction, procedure fidelity), using the CTID Adversary Emulation Library and ATT&CK Evaluations scenarios, defining objectives and success metrics, scoping, rules of engagement, deconfliction, lab vs production execution, measuring prevention and detection coverage across the kill chain, and translating results into prioritized control and detection improvements. Use when planning a full adversary emulation, tabletop-to-technical exercise, or validating defenses against a specific threat actor.",
+      "lines": 117
+    },
+    {
+      "name": "defensive-purple-team",
+      "category": "purple",
+      "path": "Skills/purple/defensive-purple-team/SKILL.md",
+      "description": "Purple teaming and detection validation: planning exercises around ATT&CK techniques, running safe emulations with Atomic Red Team (Invoke-AtomicRedTeam), MITRE Caldera, and vendor BAS tools, measuring prevention/detection/alert/response outcomes per test, telemetry gap analysis, iterating detections live with red and blue together, scoring coverage, lab design for safe testing, and reporting improvements. Use when validating whether detections fire, running purple team sessions, or pairing claude-red techniques with claude-blue detections.",
+      "lines": 126
+    },
+    {
+      "name": "defensive-elastic",
+      "category": "siem",
+      "path": "Skills/siem/defensive-elastic/SKILL.md",
+      "description": "Elastic Security / ELK SIEM engineering: Elastic Agent and Fleet integrations (Windows, System, Sysmon, Elastic Defend, AWS, Azure, Okta), ingest pipelines, Elastic Common Schema (ECS) field mapping, index lifecycle, detection rule types (custom query, EQL, ES|QL, threshold, indicator match, new terms, machine learning), prebuilt rules and elastic/detection-rules repo, exceptions and value lists, Timeline investigations, Osquery Manager, entity analytics, and Kibana/Lucene/KQL/EQL/ES|QL querying. Use for ELK-based SOC builds, detection authoring, and tuning.",
+      "lines": 149
+    },
+    {
+      "name": "defensive-security-onion",
+      "category": "siem",
+      "path": "Skills/siem/defensive-security-onion/SKILL.md",
+      "description": "Security Onion and open-source NSM/SIEM stack operations: deployment types (import, eval, standalone, distributed), sensor placement and SPAN/TAP, Suricata + Zeek + Strelka + Elastic stack, SOC UI (Alerts, Dashboards, Hunt, Cases, PCAP, Detections module for Sigma/Suricata/YARA), full packet capture retrieval, Elastic Agent endpoint ingest, Graylog as alternative log platform, and building low-cost SOC labs. Use for Security Onion builds, NSM sensor design, PCAP-backed investigations, and student/home SOC labs.",
+      "lines": 144
+    },
+    {
+      "name": "defensive-sentinel",
+      "category": "siem",
+      "path": "Skills/siem/defensive-sentinel/SKILL.md",
+      "description": "Microsoft Sentinel and Defender XDR unified SecOps: data connectors and Data Collection Rules (DCR/AMA), Log Analytics tables, analytics rule types (scheduled, NRT, Microsoft security, Fusion/ML), entity mapping, watchlists, ASIM parsers, UEBA, Sentinel data lake tier, Content Hub solutions, automation rules and Logic Apps playbooks, Defender XDR advanced hunting and custom detections, incident correlation, and the Azure-portal-to-Defender-portal transition (Azure portal management retires 31 March 2027). Use for Sentinel/Defender detection engineering, tuning, and investigation.",
+      "lines": 160
+    },
+    {
+      "name": "defensive-splunk",
+      "category": "siem",
+      "path": "Skills/siem/defensive-splunk/SKILL.md",
+      "description": "Splunk security operations: data onboarding with Technology Add-ons (Windows, Sysmon, Linux, Zeek, Suricata, AWS, Microsoft cloud), props/transforms, Common Information Model (CIM) normalization, accelerated data models and tstats, Enterprise Security (ES 8) detections and Mission Control, risk-based alerting (RBA) risk rules and risk incident rules, notable events, lookups and KV store, Splunk Security Content (ESCU) detections, SPL performance, and Splunk SOAR handoff. Use when building or tuning Splunk SIEM content or investigating in Splunk.",
+      "lines": 154
+    },
+    {
+      "name": "defensive-wazuh",
+      "category": "siem",
+      "path": "Skills/siem/defensive-wazuh/SKILL.md",
+      "description": "Wazuh open-source SIEM/XDR operations (4.x): architecture (agent, manager, indexer, dashboard), agent enrollment and groups, centralized agent.conf, Windows eventchannel and Sysmon collection, Linux auditd/journald collection, custom decoders and rules (levels, if_sid, if_group, field pcre2, frequency/timeframe, CDB lists), wazuh-logtest, FIM/syscheck with whodata, SCA, vulnerability detection, active response, integrations (VirusTotal, Shuffle, Slack, TheHive), MITRE mapping, archives, and troubleshooting. Use for Wazuh lab builds, rule writing, tuning, and SOC operations on Wazuh.",
+      "lines": 233
+    },
+    {
+      "name": "defensive-alert-triage",
+      "category": "soc",
+      "path": "Skills/soc/defensive-alert-triage/SKILL.md",
+      "description": "SOC L1/L2 alert triage methodology. Use when an analyst pastes an alert, raw log, EDR/SIEM detection, phishing report, or asks 'is this malicious', 'true positive or false positive', 'should I escalate'. Covers entity extraction, IOC vs IOA, enrichment order (asset, identity, prevalence, reputation, process tree), TP/BTP/FP/Undetermined verdicts, confidence levels, severity assignment, escalation criteria, ticket notes, alert fatigue and suppression hygiene, SLA mapping, and handoff to incident response. Applies to Splunk, Sentinel/Defender XDR, Elastic, Wazuh, QRadar, CrowdStrike, SentinelOne, Security Onion alerts.",
+      "lines": 168
+    },
+    {
+      "name": "defensive-log-sources",
+      "category": "soc",
+      "path": "Skills/soc/defensive-log-sources/SKILL.md",
+      "description": "Log source onboarding, telemetry coverage and visibility gap analysis. Use when deciding what to collect, mapping log sources to MITRE ATT&CK data components, configuring Windows Advanced Audit Policy, enabling command-line process auditing, PowerShell logging, Sysmon deployment, Linux auditd, cloud audit logs (CloudTrail, Entra, GCP), retention planning, parsing/normalization (ECS, CIM, ASIM, OCSF, UDM), log source health monitoring, silent-source detection, and estimating ingest volume and cost.",
+      "lines": 183
+    },
+    {
+      "name": "defensive-soar-automation",
+      "category": "soc",
+      "path": "Skills/soc/defensive-soar-automation/SKILL.md",
+      "description": "SOAR and SOC automation design: enrichment pipelines, case management, auto-triage, safe automated containment, human-in-the-loop approval, and playbook-as-code. Use when building workflows in Shuffle, Tines, TheHive/Cortex, Splunk SOAR, Microsoft Sentinel automation rules and Logic Apps playbooks, Google SecOps SOAR, Wazuh active response, or Python/n8n glue; when deciding what to automate vs keep manual; or when securing the automation platform itself (credentials, webhook auth, prompt injection into AI-assisted triage).",
+      "lines": 130
+    },
+    {
+      "name": "defensive-soc-playbooks",
+      "category": "soc",
+      "path": "Skills/soc/defensive-soc-playbooks/SKILL.md",
+      "description": "Authoring SOC playbooks and runbooks: decision trees, containment authority matrices, escalation paths, communication plans, RACI, and SLA definitions. Use when writing or reviewing an incident playbook (phishing, malware, ransomware, BEC, account compromise, data exfiltration, insider, DDoS, cloud key leak), converting tribal knowledge into runbooks, designing SOC tiering and shift handover, defining metrics (MTTD, MTTA, MTTC, MTTR), or aligning to NIST SP 800-61r3 / CSF 2.0 and CISA federal IR playbooks.",
+      "lines": 177
+    },
+    {
+      "name": "defensive-cicd-hardening",
+      "category": "supply-chain",
+      "path": "Skills/supply-chain/defensive-cicd-hardening/SKILL.md",
+      "description": "CI/CD pipeline security for GitHub Actions, GitLab CI, Jenkins, and Azure DevOps: least-privilege GITHUB_TOKEN permissions, pinning actions to full commit SHAs, pull_request_target and workflow_run 'pwn request' risks, script injection via untrusted context expressions, cache poisoning, OIDC federation to cloud instead of stored secrets, environment protections and required reviewers, self-hosted runner isolation (ephemeral runners), branch protection/rulesets, CODEOWNERS, artifact attestation, and detecting malicious workflow changes. Informed by tj-actions/changed-files (CVE-2025-30066) and the Shai-Hulud npm worm campaigns (2025–2026). Use when auditing or securing build pipelines.",
+      "lines": 154
+    },
+    {
+      "name": "defensive-sbom-slsa",
+      "category": "supply-chain",
+      "path": "Skills/supply-chain/defensive-sbom-slsa/SKILL.md",
+      "description": "Software supply chain integrity: SBOM generation and consumption (CycloneDX 1.6/1.7 incl. CBOM, SPDX 2.3/3.0, Syft, cdxgen, Trivy), VEX for exploitability statements (OpenVEX, CSAF VEX, CycloneDX VEX), SLSA v1.x build provenance levels, in-toto attestations, Sigstore (cosign, Rekor, Fulcio) signing and verification, GitHub artifact attestations, dependency pinning and lockfiles, dependency confusion and typosquatting defenses (scoped packages, private registries, allowlists), malicious package detection, OpenSSF Scorecard, and responding to compromised upstream packages (npm worms, protestware). Use when securing dependencies, producing SBOMs, or responding to a supply chain incident.",
+      "lines": 137
+    },
+    {
+      "name": "defensive-secrets-management",
+      "category": "supply-chain",
+      "path": "Skills/supply-chain/defensive-secrets-management/SKILL.md",
+      "description": "Secrets management and leak response: centralized vaults (HashiCorp Vault/OpenBao, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager), dynamic and short-lived credentials, workload identity instead of static secrets, secret scanning (gitleaks, trufflehog with verification, GitHub secret scanning and push protection, GitLab), scanning history, CI logs, container images and package artifacts, pre-commit hooks, rotation runbooks for leaked AWS/Azure/GCP/GitHub/npm/Slack/database credentials, and detecting use of leaked secrets. Use when designing secrets handling or responding to a leaked credential.",
+      "lines": 127
+    },
+    {
+      "name": "defensive-ir-reporting",
+      "category": "utility",
+      "path": "Skills/utility/defensive-ir-reporting/SKILL.md",
+      "description": "Incident and security reporting: executive summaries, technical incident reports, timelines, root cause analysis, impact statements, IOC appendices, lessons learned / post-incident reviews (blameless), regulatory notification drafts support, sitreps, and audience-specific writing (executives, legal, engineers, customers). Includes templates, confidence and estimative language, defanging, evidence referencing, and quality checklists. Use when writing any incident report, post-mortem, hunt report summary, or security briefing.",
+      "lines": 141
+    },
+    {
+      "name": "defensive-quick-checks",
+      "category": "utility",
+      "path": "Skills/utility/defensive-quick-checks/SKILL.md",
+      "description": "Fast compromise-assessment checklists for the first 30 minutes on a suspect Windows, Linux, or macOS host, cloud account, or M365/Entra identity: volatile state, suspicious processes and network connections, persistence locations, recent accounts and logons, security tool status, scheduled tasks/services/cron, recently modified files, and quick cloud/identity checks. Includes copy-paste command sequences and red-flag tables. Use when an analyst needs to quickly decide whether a system is compromised before deeper forensics.",
+      "lines": 137
+    },
+    {
+      "name": "defensive-patch-management",
+      "category": "vuln-mgmt",
+      "path": "Skills/vuln-mgmt/defensive-patch-management/SKILL.md",
+      "description": "Patch and update operations: patch cadence (Microsoft Patch Tuesday, out-of-band, vendor PSIRT cycles), ring-based deployment (pilot, broad, critical), WSUS/Intune/Windows Autopatch, SCCM/ConfigMgr, Linux (unattended-upgrades, dnf-automatic, livepatch), macOS (MDM declarative updates), third-party apps, network/edge appliances and firmware, emergency patching for KEV/zero-days, verification and compliance reporting, rollback plans, and end-of-life tracking (e.g., Windows 10 end of support Oct 2025, ESU). Use when planning patch processes, responding to urgent vulnerabilities, or proving patch compliance.",
+      "lines": 132
+    },
+    {
+      "name": "defensive-vuln-management",
+      "category": "vuln-mgmt",
+      "path": "Skills/vuln-mgmt/defensive-vuln-management/SKILL.md",
+      "description": "Risk-based vulnerability management: asset inventory and exposure context, scanning (OpenVAS/Greenbone, Nessus, Qualys, Rapid7, cloud-native Inspector/Defender/SCC), CVSS v4.0 (Base, Threat, Environmental, Supplemental; CVSS-B/BT/BE/BTE), EPSS v4 probabilities, CISA KEV, SSVC decision trees and CISA BOD 26-04 risk-based remediation timelines (exposure, KEV, automatable, technical impact), the 2026 NVD enrichment triage change and alternative data sources (OSV, GHSA, vendor advisories, CNA scores), exception handling, metrics, and EU CRA vulnerability reporting obligations for manufacturers. Use when prioritizing findings, designing VM programs, or explaining scores.",
+      "lines": 142
+    },
+    {
+      "name": "defensive-wireless-design",
+      "category": "wireless",
+      "path": "Skills/wireless/defensive-wireless-design/SKILL.md",
+      "description": "Secure enterprise wireless architecture: WPA3-Enterprise (incl. 192-bit mode) and WPA3-Personal (SAE), transition-mode risks, Protected Management Frames (802.11w), 802.1X with EAP-TLS vs PEAP-MSCHAPv2, RADIUS server certificate validation on clients, NAC and dynamic VLAN assignment, guest isolation and captive portals, identity PSK / per-user PSK, WPS disablement, IoT segmentation, management plane security for controllers, Bluetooth/BLE policy, and Wi-Fi 6E/7 security requirements. Use when designing or auditing Wi-Fi security.",
+      "lines": 119
+    },
+    {
+      "name": "defensive-wireless-ids",
+      "category": "wireless",
+      "path": "Skills/wireless/defensive-wireless-ids/SKILL.md",
+      "description": "Wireless intrusion detection and monitoring: WIDS/WIPS on enterprise controllers (Cisco, Aruba, Huawei, Ubiquiti, Meraki), Kismet sensors, detecting rogue APs, evil twins and KARMA/MANA attacks, deauthentication/disassociation floods, PMKID/handshake capture attempts, WPS brute force, WPA3 transition-mode downgrade, Bluetooth/BLE and other RF anomalies, correlating wireless events with wired/NAC data, and responding to wireless incidents including locating devices. Use when monitoring Wi-Fi airspace or investigating wireless attacks.",
+      "lines": 115
+    }
+  ]
+}
