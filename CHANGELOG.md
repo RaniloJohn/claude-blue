@@ -2,6 +2,32 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
+## [1.1.0] — 2026-10-23
+
+### Added
+- **72 new skills (150 total, 31 categories)**
+- **Research** (1): `defensive-blue-research` — research-first methodology (source hierarchy, currency verification, Admiralty grading, lab validation, recommendation format)
+- **Defense Model** (10): security fundamentals, defense in depth, zero trust architecture, security architecture, kill chain/Diamond/Pyramid, threat-informed defense, active defense (MITRE Engage), cyber resilience (NIST 800-160v2), D3FEND countermeasures, security operating model
+- **ATT&CK Detection Packs** (12): one per tactic — initial access through impact
+- **Network Security** (+15 → 20): architecture, NGFW policy, IDS/IPS deployment, NetFlow/NDR, network forensics, DNS, proxy/TLS inspection, remote access/ZTNA, VPN/IPsec, NAC, IPv6, routing/BGP, SD-WAN/SASE, DDoS, TLS/PKI — Cisco IOS-XE and Huawei VRP examples
+- **SOC** (+4): SOC building, security metrics, UEBA/RBA, log parsing
+- **SIEM & XDR** (+6): Graylog, QRadar, Google SecOps (YARA-L), CrowdStrike Falcon (CQL/RTR), Defender XDR, SentinelOne
+- **Active Directory** (+1): AD forest recovery
+- **Tools** (23): `defensive-tool-safety` umbrella plus doc-verified skills for Velociraptor, osquery, KAPE/EZ Tools, Volatility 3, Hayabusa/Chainsaw, Plaso, CyberChef, TheHive/Cortex, MISP/OpenCTI, Falco, Trivy/Syft/Grype, Sigstore cosign, SAST (Semgrep/Opengrep/CodeQL), secret scanners, DAST (ZAP/Nuclei), Nmap, AD assessment (BloodHound CE/PingCastle), cloud posture (Prowler/Steampipe/kube-bench), emulation (Atomic Red Team/Caldera), Sysinternals, Wazuh operations, honeypots
+- Router: principles 13–14 (research-first, tools are Tier 0), workflows W7 Defense Architecture and W8 Research & Recommendation, expanded skill router and current-state notes
+- `tools/build_readme_index.py` and `tools/skill_summaries.json` to generate the README index
+
+### Changed
+- README rebuilt (centered header, badges, defense-model map, 150-skill index, expanded Red ↔ Blue map, roadmap)
+- Security Onion skill updated for 3.x (Oracle Linux 9 only, Stenographer → Suricata PCAP, 2.4 EOL Oct 1 2026)
+- Wazuh, Sysmon (native Sysmon behavior), CI/CD (Trivy compromise), Zeek (9.0 LTS), Suricata (8.0.x) updated
+- Cross-references to unbuilt skills repointed to existing skills
+
+### Content currency (verified 2026-10-23 from release tags, vendor docs, advisories)
+- Trivy supply chain compromise CVE-2026-33634 (March 2026); Velociraptor 0.77.2/0.77.3 advisories; Wazuh CVE-2025-24016 (KEV), CVE-2026-30893, CVE-2026-34150
+- Falco 0.44 removals (legacy eBPF, gVisor, gRPC output); cosign v3 defaults; Semgrep Rules License / Opengrep; Hayabusa 4.x `dfir-timeline`
+- Security Onion 3.x; Zeek 9.0 LTS; Suricata 8.0.7; BloodHound CE 9.8.0; CA/B SC-081 certificate lifetimes; NIST SP 800-63-4
+
 ## [1.0.0] — 2026-10-23
 
 ### Added

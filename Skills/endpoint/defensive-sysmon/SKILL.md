@@ -124,7 +124,7 @@ sysmon64.exe -c                                   # print current config
 sysmon64.exe -u                                   # uninstall
 ```
 
-**Native Sysmon (Windows 11)**: Sysmon ships as an optional Windows feature (Insider builds Feb 2026, GA via cumulative updates for 24H2+). Enable via Settings › System › Optional features › More Windows features, or `Dism /Online /Enable-Feature /FeatureName:Sysmon`, then `sysmon -i`. Remove the Sysinternals-installed Sysmon first. Updates arrive through Windows Update; configuration remains XML (`sysmon -c`) or management tooling. Verify availability on Windows Server per current Microsoft docs.
+**Native Sysmon (Windows 11)**: Sysmon ships as an optional Windows feature (Insider builds Feb 2026, GA via cumulative updates for 24H2+). Enable via Settings › System › Optional features › More Windows features, or `Dism /Online /Enable-Feature /FeatureName:Sysmon`, then `sysmon -i`. Remove the Sysinternals-installed Sysmon first. Updates arrive through Windows Update; configuration remains XML (`sysmon -c`) or management tooling. Per Microsoft's Sysmon overview: available as an optional feature on Windows 11 and Windows Server 2025; built-in and standalone Sysmon cannot coexist; config is preserved across feature updates (no restart); binaries update via Windows quality updates even when disabled (critical fixes in the monthly B release); rendered event text is localized but event XML is not — **parse XML fields, not message text**; config reloads automatically on registry change. Pilot new builds before broad rollout.
 
 Deploy at scale: GPO startup script, Intune Win32 app, SCCM, or EDR script; store config in a version-controlled share.
 

@@ -50,7 +50,7 @@ Action: `alert | pass | drop | reject | rejectsrc | rejectdst | rejectboth`. Hea
 | Kerberos | `krb5.cname`, `krb5.sname`, `krb5_msg_type`, `krb5_err_code` |
 | Others | `ldap.*` (8.x), `mqtt.*`, `snmp.*`, `quic.sni`, `websocket.*` (8.x), `pgsql.query` (8.x) |
 
-Suricata 8.0 (July 2025) "log/detect parity": if a field is logged in EVE, a keyword exists to match it. New transforms/keywords include `from_base64`, `entropy`, `luaxform`, `requires`, and datasets with JSON enrichment (`datajson`).
+Suricata 8.0 (July 2025; 8.0.7 latest observed 2026-10-23) "log/detect parity": if a field is logged in EVE, a keyword exists to match it. New transforms/keywords include `from_base64`, `entropy`, `luaxform`, `requires`, and datasets with JSON enrichment (`datajson`).
 
 ---
 

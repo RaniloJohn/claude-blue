@@ -29,7 +29,7 @@ Wazuh = OSSEC lineage manager + OpenSearch-based indexer + dashboard. Detection 
 | Dashboard | Web UI | 443/tcp |
 | Cluster | Manager nodes | 1516/tcp |
 
-Current line: 4.14.x (check `documentation.wazuh.com/current/release-notes`).
+Current line: 4.14.x (4.14.9 observed 2026-10-23; ≥ 4.14.5 required for CVE-2026-30893/CVE-2026-34150; CVE-2025-24016 exploited by Mirai — see `defensive-tool-wazuh` for hardening).
 
 ---
 

@@ -5,7 +5,7 @@ description: "CI/CD pipeline security for GitHub Actions, GitLab CI, Jenkins, an
 
 # CI/CD Hardening
 
-Pipelines hold production credentials and produce the software everyone trusts. Recent incidents show attackers target CI directly: compromised third-party actions (tj-actions/changed-files, 2025), self-replicating npm worms stealing CI tokens (Shai-Hulud, Sept and Nov 2025), and 2026 waves that poisoned GitHub Actions caches via pwn requests so that legitimately built packages — with valid provenance — shipped malware.
+Pipelines hold production credentials and produce the software everyone trusts. Recent incidents show attackers target CI directly: compromised third-party actions (tj-actions/changed-files, 2025), self-replicating npm worms stealing CI tokens (Shai-Hulud, Sept and Nov 2025), the March 2026 Trivy compromise (CVE-2026-33634: malicious Trivy v0.69.4 plus 76 of 77 `trivy-action` tags and all `setup-trivy` tags force-pushed with a credential stealer — a *security scanner* used as the entry point), and 2026 waves that poisoned GitHub Actions caches via pwn requests so that legitimately built packages — with valid provenance — shipped malware.
 
 ## Quick Workflow
 

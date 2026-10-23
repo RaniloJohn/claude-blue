@@ -31,7 +31,7 @@ zkg install zeek/salesforce/hassh
 zeekctl deploy && zeekctl status && zeekctl netstats
 ```
 
-Zeek 8.0 (Aug 2025) requires ZeroMQ for builds and moves clustering toward the ZeroMQ backend (8.1 completed the Broker transition for cluster comms); customizable connection tuples (e.g., VLAN-aware) are supported. Check `capture_loss.log` and `stats.log` for drops.
+Zeek 8.0 (Aug 2025) requires ZeroMQ for builds and moves clustering toward the ZeroMQ backend (8.1 completed the Broker transition for cluster comms); customizable connection tuples (e.g., VLAN-aware) are supported. Zeek **9.0** (LTS, Aug/Sep 2026; 9.0.0 observed 2026-10-23) completes the ZeroMQ cluster backend, adds WebSocket integration, a UDP packet source for encapsulated traffic, systemd management of cluster processes, and many security fixes from codebase scans — upgrade; 8.0.x is supported until 9.1. Check `capture_loss.log` and `stats.log` for drops.
 
 ---
 

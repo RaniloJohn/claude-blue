@@ -18,7 +18,20 @@ Security Onion packages network security monitoring (Suricata alerts, Zeek metad
 
 ---
 
-## 1. Deployment Types (2.4.x)
+## 0. Version Status (checked 2026-10-23)
+
+| Item | Detail |
+|---|---|
+| Current line | Security Onion 3.x (3.0 released Mar 31, 2026; 3.3.0 latest observed) |
+| OS | **Oracle Linux 9 only** — other distros need a fresh 3.x install |
+| PCAP | Stenographer removed; full packet capture handled by Suricata (migrate before upgrading from 2.4) |
+| New | JA4+ (requires accepting FoxIO license), dynamic Zeek plugins, SBOM section; 3.2 added Sigma→Elastic Defend AV mapping, ES|QL in Sigma detections, Suricata transactional rule directory |
+| Pro-only | OIDC, data-at-rest encryption, FIPS/STIG OS configs, agentic AI framework |
+| EOL | Security Onion 2.4 reached end of life Oct 1, 2026 — upgrade |
+
+Test upgrades on a production-like deployment first (vendor guidance).
+
+## 1. Deployment Types
 
 | Type | Use |
 |---|---|
@@ -48,7 +61,7 @@ Prefer TAPs over SPAN for fidelity at high load. Verify both directions are visi
 
 | Component | Output |
 |---|---|
-| Suricata | Alerts (ET Open default; ETPRO optional), protocol metadata, file extraction; also handles PCAP capture in 2.4 |
+| Suricata | Alerts (ET Open default; ETPRO optional), protocol metadata, file extraction; full packet capture (replaced Stenographer in 3.x) |
 | Zeek | conn, dns, http, ssl, x509, files, smb, kerberos, notice logs |
 | Strelka | Recursive file scanning (YARA, metadata) on extracted files |
 | Elastic stack | Storage/search |

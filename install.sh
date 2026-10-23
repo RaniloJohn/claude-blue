@@ -27,7 +27,7 @@ Usage: ./install.sh [options]
   -h, --help          Show this help
 
 Examples:
-  ./install.sh                                  # all 78 skills to ~/.claude/skills
+  ./install.sh                                  # all skills to ~/.claude/skills
   ./install.sh --target .claude/skills          # project-level install
   ./install.sh --category soc,detection,siem    # selected categories (+ core router)
   ./install.sh --skill defensive-wazuh --link   # one skill, symlinked
