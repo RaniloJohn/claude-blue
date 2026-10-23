@@ -1,4 +1,6 @@
-<h1 align="center">claude-blue</h1>
+<p align="center">
+  <img src="assets/claude-blue-header.png" alt="claude blue — a library of Claude blue team skills" width="100%">
+</p>
 
 <p align="center">
   <b>Defensive security skills for Claude: drop-in <code>SKILL.md</code> files that turn Claude into a context-aware blue team operator.</b><br>
@@ -25,6 +27,10 @@
   <a href="#red--blue-map">Red ↔ Blue</a> •
   <a href="#roadmap">Roadmap</a> •
   <a href="#contributing">Contributing</a>
+</p>
+
+<p align="center">
+  <sub>Built in the format of <a href="https://github.com/SnailSploit/claude-red"><b>claude-red</b></a> by <a href="https://github.com/SnailSploit"><b>Kai Aizen (SnailSploit)</b></a>. Full credit to him for the original skill-library concept and structure.</sub>
 </p>
 
 ---
@@ -628,6 +634,7 @@ claude-blue/
 ├── tools/build_readme_index.py           # regenerates the Categories table + Skill Index
 ├── tools/skill_summaries.json            # one-line summaries used by the index
 ├── .github/workflows/validate.yml        # CI lint + manifest check
+├── assets/claude-blue-header.png         # README banner
 ├── MINDMAP.md  CHANGELOG.md  CONTRIBUTING.md  SECURITY.md  LICENSE
 ```
 
@@ -683,7 +690,7 @@ Detections, queries, configurations, and commands are starting points. Field nam
 
 ## Acknowledgements
 
-- Structure and format inspired by [claude-red](https://github.com/SnailSploit/claude-red) by Kai Aizen (SnailSploit), MIT.
+- **[Kai Aizen (SnailSploit)](https://github.com/SnailSploit)**, creator of [claude-red](https://github.com/SnailSploit/claude-red) (MIT). claude-blue follows its skill-library concept, folder structure, and format. This project would not exist without it.
 - **MITRE:** ATT&CK, D3FEND, Engage, ATLAS, and the Center for Threat-Informed Defense.
 - **Standards bodies and agencies:** NIST (CSF 2.0, SP 800-207, SP 800-160, SP 800-63-4), FIRST (CVSS, EPSS, TLP), and CISA (KEV, SSVC, BODs, ZTMM).
 - **Community projects:** SigmaHQ, OWASP, CIS Controls and Benchmarks, and MANRS.
