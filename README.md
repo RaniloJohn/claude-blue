@@ -9,10 +9,10 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-0a66c2"></a>
-  <img alt="skills 150" src="https://img.shields.io/badge/skills-150-1f6feb">
-  <img alt="categories 31" src="https://img.shields.io/badge/categories-31-0e8a16">
+  <img alt="skills 180" src="https://img.shields.io/badge/skills-180-1f6feb">
+  <img alt="categories 32" src="https://img.shields.io/badge/categories-32-0e8a16">
   <img alt="MITRE ATT&CK v18" src="https://img.shields.io/badge/MITRE%20ATT%26CK-v18-informational">
-  <img alt="version 1.1.0" src="https://img.shields.io/badge/version-1.1.0-brightgreen">
+  <img alt="version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-brightgreen">
   <a href="https://github.com/ranilojohn/claude-blue/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ranilojohn/claude-blue?style=social"></a>
   <a href="https://github.com/ranilojohn/claude-blue/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ranilojohn/claude-blue?style=social"></a>
 </p>
@@ -39,7 +39,7 @@
 
 `claude-blue` is a library of defensive security skills for [Claude Skills](https://docs.claude.com). It is the blue-team counterpart to [claude-red](https://github.com/SnailSploit/claude-red).
 
-- **150 skills in 31 categories.** Each skill covers one defensive surface.
+- **180 skills in 32 categories.** Each skill covers one defensive surface.
 - **One umbrella skill, `claude-blue`.** It sets operating standards, routes each task to the right specialist, and enforces fixed output templates.
 
 Skills load on demand from conversational triggers. For example, pasting a 4769 event loads `defensive-ad-detection`. Asking about a rogue router advertisement loads `defensive-ipv6-security`. Asking "should we deploy Velociraptor?" loads `defensive-blue-research` and `defensive-tool-velociraptor`. Context is spent only on what you use.
@@ -84,7 +84,7 @@ Skills load on demand from conversational triggers. For example, pasting a 4769 
 ```bash
 git clone https://github.com/ranilojohn/claude-blue
 cd claude-blue
-./install.sh                         # copies all 150 skills to ~/.claude/skills
+./install.sh                         # copies all 180 skills to ~/.claude/skills
 ```
 
 Claude Code discovers skills one level deep (`~/.claude/skills/<skill>/SKILL.md`). The installer flattens `Skills/<category>/<skill>` for you.
@@ -189,31 +189,32 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | [Detection Engineering](#detection-engineering) | 5 | Sigma, YARA/YARA-X, Suricata/Snort, query languages, detection-as-code |
 | [ATT&CK Detection Packs](#attck-detection-packs) | 12 | One pack per ATT&CK tactic: telemetry, rules, FPs, triage |
 | [SIEM & XDR Platforms](#siem--xdr-platforms) | 11 | Wazuh, Elastic, Splunk, Sentinel, Security Onion, Graylog, QRadar, Google SecOps, Defender XDR, CrowdStrike, SentinelOne |
-| [Threat Hunting](#threat-hunting) | 3 | Methodology, Windows hunts, network hunts |
-| [Incident Response](#incident-response) | 5 | IR command, live response, ransomware, BEC, cloud IR |
-| [Digital Forensics](#digital-forensics) | 5 | Windows, Linux, macOS, memory, timelines |
-| [Malware Analysis](#malware-analysis) | 3 | Static triage, dynamic analysis, malicious documents |
+| [Threat Hunting](#threat-hunting) | 5 | Methodology, Windows hunts, network hunts |
+| [Incident Response](#incident-response) | 7 | IR command, live response, ransomware, BEC, cloud IR |
+| [Digital Forensics](#digital-forensics) | 9 | Windows, Linux, macOS, memory, timelines |
+| [Malware Analysis](#malware-analysis) | 6 | Static triage, dynamic analysis, malicious documents |
 | [Threat Intelligence](#threat-intelligence) | 3 | CTI, ATT&CK/D3FEND mapping, IOC management |
-| [Endpoint](#endpoint) | 5 | Windows event logs, Sysmon, Linux telemetry, EDR tuning, Windows hardening |
+| [Endpoint](#endpoint) | 6 | Windows event logs, Sysmon, Linux telemetry, EDR tuning, Windows hardening |
 | [Active Directory](#active-directory) | 3 | AD/AD CS hardening, attack detection, forest recovery |
-| [Identity](#identity) | 2 | Entra ID, secure auth implementation |
-| [Application Security](#application-security) | 4 | Secure code review, WAF, API security, SAST/DAST |
+| [Identity](#identity) | 7 | Entra ID, secure auth implementation |
+| [Application Security](#application-security) | 6 | Secure code review, WAF, API security, SAST/DAST |
 | [Network Security](#network-security) | 20 | Architecture, NGFW, IDS/IPS, NDR, forensics, DNS, proxy/TLS, ZTNA, VPN, NAC, IPv6, BGP, SASE, DDoS, PKI, L2, segmentation |
 | [Wireless](#wireless) | 2 | WIDS, secure Wi-Fi design |
-| [Cloud](#cloud) | 4 | AWS, Azure, GCP, CSPM/IaC |
+| [Cloud](#cloud) | 7 | AWS, Azure, GCP, CSPM/IaC |
 | [Container & Kubernetes](#container--kubernetes) | 2 | Container hardening, Kubernetes security |
 | [Supply Chain & CI/CD](#supply-chain--cicd) | 3 | Pipeline hardening, secrets, SBOM/SLSA |
-| [Vulnerability Management](#vulnerability-management) | 2 | Risk-based prioritization, patching |
-| [Hardening](#hardening) | 2 | Linux, Cisco/Huawei network devices |
+| [Vulnerability Management](#vulnerability-management) | 4 | Risk-based prioritization, patching |
+| [Hardening](#hardening) | 3 | Linux, Cisco/Huawei network devices |
 | [Email Security](#email-security) | 2 | SPF/DKIM/DMARC, phishing triage |
 | [Deception](#deception) | 1 | Honeytokens, honey accounts, honeypots |
 | [OT/ICS](#otics) | 1 | Purdue/IEC 62443, ICS protocol monitoring |
 | [AI Security](#ai-security) | 1 | LLM & agent security (OWASP LLM + Agentic Top 10) |
+| [Human & Physical](#human--physical) | 2 | Security awareness, physical security |
 | [Purple Team](#purple-team) | 2 | Detection validation, adversary emulation |
-| [GRC](#grc) | 2 | Framework mapping, threat modeling & risk |
+| [GRC](#grc) | 5 | Framework mapping, threat modeling & risk |
 | [Utility](#utility) | 2 | IR reporting, 30-minute compromise checks |
 | [Tools](#tools) | 23 | Doc-verified safe operation of 22 tool families + tool-safety umbrella |
-| **Total** | **150** | |
+| **Total** | **180** | |
 
 ---
 
@@ -322,6 +323,8 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 
 | Skill | What it covers |
 |---|---|
+| [`defensive-hunt-linux`](Skills/hunting/defensive-hunt-linux/SKILL.md) | SSH brute→success, temp-dir exec, curl|sh, reverse shells, persistence stacking, privesc, miners, webshells, escapes |
+| [`defensive-hunt-macos`](Skills/hunting/defensive-hunt-macos/SKILL.md) | ESF/eslogger/unified log/osquery hunts for infostealers, unsigned binaries, quarantine removal, launchd/BTM, TCC abuse |
 | [`defensive-hunt-network`](Skills/hunting/defensive-hunt-network/SKILL.md) | Beaconing (CV), long connections, DNS tunneling/DGA, TLS/JA4, exfil, east-west |
 | [`defensive-hunt-windows`](Skills/hunting/defensive-hunt-windows/SKILL.md) | Lineage, LOLBins, PowerShell, persistence, credential access, injection, BYOVD, evasion |
 | [`defensive-threat-hunting`](Skills/hunting/defensive-threat-hunting/SKILL.md) | PEAK, TaHiTI, hypotheses, data readiness, analysis techniques, hunt reports |
@@ -335,8 +338,10 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | [`defensive-bec-response`](Skills/ir/defensive-bec-response/SKILL.md) | AiTM token theft, inbox rules, OAuth grants, revocation order, payment recall |
 | [`defensive-cloud-ir`](Skills/ir/defensive-cloud-ir/SKILL.md) | AWS/Azure/GCP credential revocation, scoping, persistence, snapshots, GuardDuty attack sequences |
 | [`defensive-incident-response`](Skills/ir/defensive-incident-response/SKILL.md) | Roles, scoping, evidence, containment strategy & library, eradication, RCA, sitreps |
+| [`defensive-ir-readiness`](Skills/ir/defensive-ir-readiness/SKILL.md) | IR plan (800-61r3), authority, OOB comms, technical readiness checklist, jump bag, retainers/insurance/CERT contacts |
 | [`defensive-live-response`](Skills/ir/defensive-live-response/SKILL.md) | Velociraptor, EDR live response, memory acquisition, volatile data, KAPE, UAC |
 | [`defensive-ransomware-response`](Skills/ir/defensive-ransomware-response/SKILL.md) | Precursors, imminent-encryption signals, first-hour containment, identity-first recovery |
+| [`defensive-web-compromise-response`](Skills/ir/defensive-web-compromise-response/SKILL.md) | Webshells, skimmers, SEO spam: evidence, log analysis, wp-cli checksums, backdoor hunting, rebuild, PCI 6.4.3/11.6.1 |
 
 ### Digital Forensics
 
@@ -344,6 +349,10 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 
 | Skill | What it covers |
 |---|---|
+| [`defensive-browser-forensics`](Skills/forensics/defensive-browser-forensics/SKILL.md) | Chromium/Firefox/Safari artifacts, SQL for visits/downloads, timestamp formats, extensions, cookie theft, ClickFix evidence |
+| [`defensive-container-forensics`](Skills/forensics/defensive-container-forensics/SKILL.md) | Quarantine pods without deleting, docker/crictl evidence, checkpoints, overlay layers, K8s audit, escape and credential analysis |
+| [`defensive-disk-imaging`](Skills/forensics/defensive-disk-imaging/SKILL.md) | Live vs dead acquisition, encryption keys, E01/dd with hashing, ddrescue, SSD caveats, VM and cloud snapshots, chain of custody |
+| [`defensive-email-forensics`](Skills/forensics/defensive-email-forensics/SKILL.md) | Header analysis, sender classification, MIME extraction, message trace, EmailEvents/UrlClickEvents, UAL, BEC timeline |
 | [`defensive-linux-forensics`](Skills/forensics/defensive-linux-forensics/SKILL.md) | Auth timeline, persistence sweep, package integrity, web shells, Volatility linux plugins |
 | [`defensive-macos-forensics`](Skills/forensics/defensive-macos-forensics/SKILL.md) | Unified Log, eslogger/ESF, BTM, TCC, quarantine, infostealer patterns |
 | [`defensive-memory-forensics`](Skills/forensics/defensive-memory-forensics/SKILL.md) | Volatility 3 process/injection/network analysis, MemProcFS |
@@ -357,8 +366,11 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | Skill | What it covers |
 |---|---|
 | [`defensive-dynamic-analysis`](Skills/malware/defensive-dynamic-analysis/SKILL.md) | Lab design, monitoring stack, anti-analysis, sandboxes, behavior → detection |
+| [`defensive-linux-malware`](Skills/malware/defensive-linux-malware/SKILL.md) | Miners, botnets, rootkits (preload/LKM/eBPF), webshells; triage commands, AVML, ELF analysis, detections, rebuild |
 | [`defensive-maldoc-analysis`](Skills/malware/defensive-maldoc-analysis/SKILL.md) | Office/RTF/PDF/LNK/ISO/OneNote/HTML smuggling/SVG lure analysis |
 | [`defensive-malware-triage`](Skills/malware/defensive-malware-triage/SKILL.md) | PE structure, FLOSS, capa, packers, script deobfuscation, deliverables |
+| [`defensive-reverse-engineering`](Skills/malware/defensive-reverse-engineering/SKILL.md) | Lab safety, PE/ELF/Mach-O, unpacking, Ghidra/IDA/x64dbg workflows, .NET/Go/Rust notes, config extraction, YARA on code |
+| [`defensive-script-deobfuscation`](Skills/malware/defensive-script-deobfuscation/SKILL.md) | PowerShell/JS/VBA/batch/Python deobfuscation, sink neutralization in VMs, 4104 capture, box-js/olevba, IOC extraction |
 
 ### Threat Intelligence
 
@@ -379,6 +391,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | [`defensive-edr-tuning`](Skills/endpoint/defensive-edr-tuning/SKILL.md) | Coverage, exclusion governance, tamper protection, EDR-blinding detection |
 | [`defensive-linux-telemetry`](Skills/endpoint/defensive-linux-telemetry/SKILL.md) | auditd rules, Falco/Tetragon, osquery, Linux detection catalog |
 | [`defensive-sysmon`](Skills/endpoint/defensive-sysmon/SKILL.md) | EID 1–29, config design, native Windows 11 Sysmon, Sysmon for Linux, volume control |
+| [`defensive-usb-device-control`](Skills/endpoint/defensive-usb-device-control/SKILL.md) | Defender Device Control, GPO/Intune, BitLocker To Go, USBGuard, HID injection detection, OT media kiosks |
 | [`defensive-windows-event-logs`](Skills/endpoint/defensive-windows-event-logs/SKILL.md) | Event ID reference, logon types, Kerberos/NTLM attacks, RPC pipes, ETW/AMSI |
 | [`defensive-windows-hardening`](Skills/endpoint/defensive-windows-hardening/SKILL.md) | ASR rules, LSA PPL, Credential Guard, LAPS, WDAC, protocol hardening |
 
@@ -400,6 +413,11 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 |---|---|
 | [`defensive-auth-implementation`](Skills/identity/defensive-auth-implementation/SKILL.md) | OAuth 2.x/OIDC, JWT validation, SAML, sessions, passwords/MFA, negative tests |
 | [`defensive-entra-id`](Skills/identity/defensive-entra-id/SKILL.md) | Conditional Access, PIM, Token Protection, CAE, consent governance, detections |
+| [`defensive-google-workspace-security`](Skills/identity/defensive-google-workspace-security/SKILL.md) | 2SV/admin enforcement, OAuth allowlisting, Context-Aware Access, Gmail/Drive/DLP, 6-month logs→BigQuery, ScubaGoggles |
+| [`defensive-m365-security`](Skills/identity/defensive-m365-security/SKILL.md) | ScubaGear/Maester baselines, EXO presets, SMTP AUTH default-off end-2026, sharing/consent, audit retention, BEC detections |
+| [`defensive-okta-security`](Skills/identity/defensive-okta-security/SKILL.md) | Admin hardening, FastPass binding caveats, help-desk resets, token governance, verified System Log eventTypes, agent patching |
+| [`defensive-pam`](Skills/identity/defensive-pam/SKILL.md) | Entra PIM JIT, vaulting/session recording, Windows LAPS (native, encrypted), gMSA/dMSA + BadSuccessor, break-glass guidance |
+| [`defensive-phishing-resistant-mfa`](Skills/identity/defensive-phishing-resistant-mfa/SKILL.md) | What qualifies, NIST 800-63-4 AAL2/AAL3, Entra auth strengths & passkey attestation, mandatory Azure MFA, secure recovery |
 
 ### Application Security
 
@@ -408,6 +426,8 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | Skill | What it covers |
 |---|---|
 | [`defensive-api-security`](Skills/appsec/defensive-api-security/SKILL.md) | OWASP API Top 10, BOLA-safe patterns, schema validation, GraphQL, abuse detection |
+| [`defensive-database-security`](Skills/appsec/defensive-database-security/SKILL.md) | Exposure/auth hardening per engine, least privilege, encryption, pgaudit/SQL Audit, detecting xp_cmdshell, dumps, SQLi |
+| [`defensive-mobile-app-security`](Skills/appsec/defensive-mobile-app-security/SKILL.md) | OWASP MASVS/MASTG controls, server-side attestation (Play Integrity/App Attest), MobSF/jadx/Frida testing, SDK vetting |
 | [`defensive-sast-dast`](Skills/appsec/defensive-sast-dast/SKILL.md) | Semgrep/CodeQL/OSV/Trivy/gitleaks/ZAP pipeline, triage, SLAs |
 | [`defensive-secure-code-review`](Skills/appsec/defensive-secure-code-review/SKILL.md) | OWASP Top 10:2025, sink-level fixes per language, write-up format |
 | [`defensive-waf`](Skills/appsec/defensive-waf/SKILL.md) | OWASP CRS tuning, virtual patching, cloud WAFs, bypass classes |
@@ -456,8 +476,11 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 |---|---|
 | [`defensive-aws-security`](Skills/cloud/defensive-aws-security/SKILL.md) | SCP guardrails, identity, logging, GuardDuty, CloudTrail detections |
 | [`defensive-azure-security`](Skills/cloud/defensive-azure-security/SKILL.md) | Azure Policy, RBAC/PIM, Defender for Cloud, Sentinel detections |
+| [`defensive-cloud-data-security`](Skills/cloud/defensive-cloud-data-security/SKILL.md) | Macie/Purview/SDP, public-access prevention, CMK/key policies, SSE-C abuse, data perimeters (SCP/RCP/VPC-SC), snapshot controls |
 | [`defensive-cspm`](Skills/cloud/defensive-cspm/SKILL.md) | Prowler/Steampipe/native CSPM, toxic combinations, IaC scanning, drift |
 | [`defensive-gcp-security`](Skills/cloud/defensive-gcp-security/SKILL.md) | Org policies, service account security, audit logs, SCC, detections |
+| [`defensive-saas-security`](Skills/cloud/defensive-saas-security/SKILL.md) | SaaS posture, OAuth/connected-app governance, Salesloft Drift, UNC6040 vishing, Snowflake UNC5537 and MFA phases, SaaS IR |
+| [`defensive-serverless-security`](Skills/cloud/defensive-serverless-security/SKILL.md) | Least-privilege function roles, secrets, event input validation, function URL auth, persistence and credential-theft detection |
 
 ### Container & Kubernetes
 
@@ -484,7 +507,9 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 
 | Skill | What it covers |
 |---|---|
+| [`defensive-asset-inventory`](Skills/vuln-mgmt/defensive-asset-inventory/SKILL.md) | CIS 1–2 inventory from directory/MDM/EDR/cloud/DHCP/NAC/scans, gap queries, attributes, software inventory, KPIs |
 | [`defensive-patch-management`](Skills/vuln-mgmt/defensive-patch-management/SKILL.md) | Rings, emergency lane, edge appliances, verification, rollback, EOL |
+| [`defensive-security-testing-program`](Skills/vuln-mgmt/defensive-security-testing-program/SKILL.md) | Test types (pentest, red/purple, TLPT, VDP), RoE and authorization, vendor selection, findings→fixes→detections |
 | [`defensive-vuln-management`](Skills/vuln-mgmt/defensive-vuln-management/SKILL.md) | CVSS v4, EPSS v4, KEV, SSVC, BOD 26-04 matrix, post-NVD data sources, EU CRA |
 
 ### Hardening
@@ -495,6 +520,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 |---|---|
 | [`defensive-linux-hardening`](Skills/hardening/defensive-linux-hardening/SKILL.md) | OpenSCAP/Lynis, SSH, sudo/PAM, sysctl, SELinux/AppArmor, nftables |
 | [`defensive-network-device-hardening`](Skills/hardening/defensive-network-device-hardening/SKILL.md) | Cisco IOS & Huawei VRP: AAA, SSH, SNMPv3, NTP auth, CoPP, routing auth |
+| [`defensive-web-server-hardening`](Skills/hardening/defensive-web-server-hardening/SKILL.md) | nginx/Apache/IIS/PHP/Tomcat hardening, dotfile/backup exposure, limits, security log format, verification |
 
 ### Email Security
 
@@ -529,6 +555,15 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 |---|---|
 | [`defensive-ai-security`](Skills/ai/defensive-ai-security/SKILL.md) | OWASP LLM Top 10 2025, Agentic Top 10 2026, prompt injection, MCP, RAG, monitoring |
 
+### Human & Physical
+
+`Skills/human/`
+
+| Skill | What it covers |
+|---|---|
+| [`defensive-physical-security`](Skills/human/defensive-physical-security/SKILL.md) | Layered physical controls, modern badges, rogue devices/jacks, media sanitization (800-88), badge logs in SIEM |
+| [`defensive-security-awareness`](Skills/human/defensive-security-awareness/SKILL.md) | Behavior targets (QR, MFA fatigue, vishing, deepfakes, ClickFix), role-based training, ethical simulations, report-rate metrics |
+
 ### Purple Team
 
 `Skills/purple/`
@@ -544,7 +579,10 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 
 | Skill | What it covers |
 |---|---|
+| [`defensive-bcp-dr`](Skills/grc/defensive-bcp-dr/SKILL.md) | BIA (MTD/RTO/RPO), tiered DR strategies, cyber-aware recovery order, plans, testing types |
 | [`defensive-frameworks`](Skills/grc/defensive-frameworks/SKILL.md) | NIST CSF 2.0, CIS v8.1, ISO 27001:2022, PCI DSS 4.0.1, NIS2, DORA, PH DPA crosswalk |
+| [`defensive-policy-standards`](Skills/grc/defensive-policy-standards/SKILL.md) | Policy/standard/procedure hierarchy, core policy set incl. AI use, testable requirements, ISO 27001:2022 mapping, exceptions |
+| [`defensive-privacy-data-protection`](Skills/grc/defensive-privacy-data-protection/SKILL.md) | Records of processing, minimization, DPIAs, pseudonymization, privacy in security monitoring, GDPR/PH DPA overview |
 | [`defensive-risk-threat-modeling`](Skills/grc/defensive-risk-threat-modeling/SKILL.md) | STRIDE, attack trees, risk scoring, FAIR basics, risk register |
 
 ### Utility
@@ -626,7 +664,7 @@ Run offensive techniques only in environments you are authorized to test.
 
 ```text
 claude-blue/
-├── Skills/<category>/<skill>/SKILL.md    # 150 skills in 31 categories
+├── Skills/<category>/<skill>/SKILL.md    # 180 skills in 32 categories
 ├── install.sh                            # flattening installer (copy/link, category/skill filters)
 ├── claude-skills.json                    # generated manifest
 ├── tools/check-skill.sh                  # linter (frontmatter, name/folder, description ≤1024, sections, fences)
@@ -646,12 +684,12 @@ claude-blue/
 |---|---|---|
 | 1 | 78 skills across 27 categories, router skill, installer, linter, manifest | ✓ Complete (v1.0) |
 | 2 | ATT&CK tactic packs, defense model, network security (20), SOC/SIEM/XDR platforms, 23 doc-verified tool skills, research methodology, AD forest recovery | ✓ Complete (v1.1) |
+| 2.5 | Identity & SaaS (PAM, phishing-resistant MFA, Okta, M365, Workspace, SaaS), forensics (disk, container, browser, email), malware (deobfuscation, RE, Linux), Linux/macOS hunts, IR readiness, web compromise, GRC (BCP/DR, policy, privacy), asset inventory, testing program, cloud data & serverless, human & physical, DB/mobile/web-server security | ✓ Complete (v1.2) |
 | 3 | `tests/`: sample logs with expected verdicts per skill for regression testing | Planned |
 | 4 | Tested Sigma rule pack with TP/FP samples and CI conversion to SPL/KQL/ES\|QL/YARA-L | Planned |
-| 5 | Identity & SaaS: PAM, phishing-resistant MFA, Okta, M365, Google Workspace, SaaS/OAuth governance | Planned |
-| 6 | Endpoint & mobile: macOS hardening, application control, PowerShell security, MDM, mobile forensics | Planned |
-| 7 | Hunting & IR depth: Linux/macOS/cloud/identity hunts, edge-device compromise, insider threat, data breach response, tabletop exercises | Planned |
-| 8 | Resilience & GRC: backup security, BCP/DR, third-party risk, privacy, policy, PQC crypto-agility | Planned |
+| 6 | Endpoint & mobile: macOS hardening, application control, PowerShell security, browser security, MDM, mobile forensics | Planned |
+| 7 | Hunting & IR depth: cloud/identity hunts, edge-device compromise, insider threat, data breach response, tabletop exercises | Planned |
+| 8 | Resilience & GRC: backup security, third-party risk, PQC crypto-agility, AD CS, virtualization, EASM | Planned |
 | 9 | Localized content: Philippine regulatory notes (Data Privacy Act/NPC, DICT/CERT-PH, BSP), APAC threat profiles | Planned |
 
 ---

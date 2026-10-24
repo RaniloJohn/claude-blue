@@ -104,6 +104,16 @@ Load the specialist skill(s) matching the task. If a skill is not installed, app
 | Graylog / QRadar / Google SecOps (YARA-L) | `defensive-graylog` / `defensive-qradar` / `defensive-google-secops` |
 | CrowdStrike / Defender XDR / SentinelOne | `defensive-crowdstrike-falcon` / `defensive-defender-xdr` / `defensive-sentinelone` |
 | AD forest recovery | `defensive-ad-forest-recovery` |
+| PAM / phishing-resistant MFA / Okta / M365 / Google Workspace / SaaS | `defensive-pam` / `defensive-phishing-resistant-mfa` / `defensive-okta-security` / `defensive-m365-security` / `defensive-google-workspace-security` / `defensive-saas-security` |
+| Disk imaging / container / browser / email forensics | `defensive-disk-imaging` / `defensive-container-forensics` / `defensive-browser-forensics` / `defensive-email-forensics` |
+| Script deobfuscation / reverse engineering / Linux malware | `defensive-script-deobfuscation` / `defensive-reverse-engineering` / `defensive-linux-malware` |
+| Linux / macOS hunts | `defensive-hunt-linux` / `defensive-hunt-macos` |
+| IR readiness / web compromise response | `defensive-ir-readiness` / `defensive-web-compromise-response` |
+| BCP-DR / policy & standards / privacy | `defensive-bcp-dr` / `defensive-policy-standards` / `defensive-privacy-data-protection` |
+| Asset inventory / security testing program | `defensive-asset-inventory` / `defensive-security-testing-program` |
+| USB device control / cloud data / serverless | `defensive-usb-device-control` / `defensive-cloud-data-security` / `defensive-serverless-security` |
+| Security awareness / physical security | `defensive-security-awareness` / `defensive-physical-security` |
+| Database / mobile app / web server security | `defensive-database-security` / `defensive-mobile-app-security` / `defensive-web-server-hardening` |
 | **Tool safety** (verify, pin, harden, version snapshot) | `defensive-tool-safety` |
 | Velociraptor / osquery / KAPE+EZ Tools / Volatility 3 / Hayabusa+Chainsaw / Plaso / CyberChef | `defensive-tool-velociraptor` / `defensive-tool-osquery` / `defensive-tool-kape-eztools` / `defensive-tool-volatility3` / `defensive-tool-hayabusa-chainsaw` / `defensive-tool-plaso` / `defensive-tool-cyberchef` |
 | TheHive+Cortex / MISP+OpenCTI / Wazuh ops / honeypots | `defensive-tool-thehive-cortex` / `defensive-tool-misp-opencti` / `defensive-tool-wazuh` / `defensive-tool-honeypots` |

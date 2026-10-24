@@ -39,6 +39,7 @@ CATEGORIES = [
     ("deception", "Deception", "Honeytokens, honey accounts, honeypots"),
     ("ot", "OT/ICS", "Purdue/IEC 62443, ICS protocol monitoring"),
     ("ai", "AI Security", "LLM & agent security (OWASP LLM + Agentic Top 10)"),
+    ("human", "Human & Physical", "Security awareness, physical security"),
     ("purple", "Purple Team", "Detection validation, adversary emulation"),
     ("grc", "GRC", "Framework mapping, threat modeling & risk"),
     ("utility", "Utility", "IR reporting, 30-minute compromise checks"),

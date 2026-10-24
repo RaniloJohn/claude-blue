@@ -2,7 +2,25 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
-## [1.1.0] — 2026-10-23
+## [1.2.0] — 2026-10-24
+
+### Added
+- **30 new skills (180 total, 32 categories)**, version-sensitive facts verified against primary sources on 2026-10-24
+- Identity & SaaS: `defensive-pam` (Windows LAPS, dMSA/BadSuccessor CVE-2025-53779, break-glass), `defensive-phishing-resistant-mfa` (NIST SP 800-63-4, Entra passkeys, mandatory Azure MFA), `defensive-okta-security`, `defensive-m365-security` (ScubaGear, SMTP AUTH default-off end-2026, Purview retention), `defensive-google-workspace-security`, `defensive-saas-security` (Salesloft Drift, UNC6040, Snowflake MFA phases)
+- Forensics: disk imaging, container, browser, email
+- Malware: script deobfuscation, reverse engineering, Linux malware
+- Hunting: Linux, macOS
+- IR: IR readiness, web compromise response
+- GRC: BCP/DR, policy & standards, privacy & data protection
+- Vuln mgmt: asset inventory, security testing program
+- Endpoint: USB device control; Cloud: cloud data security, serverless security
+- New **Human & Physical** category: security awareness, physical security
+- AppSec/Hardening: database security, mobile app security, web server hardening
+
+### Changed
+- Router, README index, manifest updated
+
+ — 2026-10-23
 
 ### Added
 - **72 new skills (150 total, 31 categories)**
