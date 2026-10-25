@@ -111,6 +111,7 @@ Load the specialist skill(s) matching the task. If a skill is not installed, app
 | IR readiness / web compromise response | `defensive-ir-readiness` / `defensive-web-compromise-response` |
 | BCP-DR / policy & standards / privacy | `defensive-bcp-dr` / `defensive-policy-standards` / `defensive-privacy-data-protection` |
 | Asset inventory / security testing program | `defensive-asset-inventory` / `defensive-security-testing-program` |
+| Browser security (extensions, cookie theft, ClickFix) | `defensive-browser-security` |
 | USB device control / cloud data / serverless | `defensive-usb-device-control` / `defensive-cloud-data-security` / `defensive-serverless-security` |
 | Security awareness / physical security | `defensive-security-awareness` / `defensive-physical-security` |
 | Database / mobile app / web server security | `defensive-database-security` / `defensive-mobile-app-security` / `defensive-web-server-hardening` |

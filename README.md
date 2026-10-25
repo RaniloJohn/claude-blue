@@ -9,10 +9,10 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-0a66c2"></a>
-  <img alt="skills 180" src="https://img.shields.io/badge/skills-180-1f6feb">
+  <img alt="skills 181" src="https://img.shields.io/badge/skills-181-1f6feb">
   <img alt="categories 32" src="https://img.shields.io/badge/categories-32-0e8a16">
   <img alt="MITRE ATT&CK v18" src="https://img.shields.io/badge/MITRE%20ATT%26CK-v18-informational">
-  <img alt="version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-brightgreen">
+  <img alt="version 1.2.1" src="https://img.shields.io/badge/version-1.2.1-brightgreen">
   <a href="https://github.com/ranilojohn/claude-blue/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ranilojohn/claude-blue?style=social"></a>
   <a href="https://github.com/ranilojohn/claude-blue/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ranilojohn/claude-blue?style=social"></a>
 </p>
@@ -39,7 +39,7 @@
 
 `claude-blue` is a library of defensive security skills for [Claude Skills](https://docs.claude.com). It is the blue-team counterpart to [claude-red](https://github.com/SnailSploit/claude-red).
 
-- **180 skills in 32 categories.** Each skill covers one defensive surface.
+- **181 skills in 32 categories.** Each skill covers one defensive surface.
 - **One umbrella skill, `claude-blue`.** It sets operating standards, routes each task to the right specialist, and enforces fixed output templates.
 
 Skills load on demand from conversational triggers. For example, pasting a 4769 event loads `defensive-ad-detection`. Asking about a rogue router advertisement loads `defensive-ipv6-security`. Asking "should we deploy Velociraptor?" loads `defensive-blue-research` and `defensive-tool-velociraptor`. Context is spent only on what you use.
@@ -84,7 +84,7 @@ Skills load on demand from conversational triggers. For example, pasting a 4769 
 ```bash
 git clone https://github.com/ranilojohn/claude-blue
 cd claude-blue
-./install.sh                         # copies all 180 skills to ~/.claude/skills
+./install.sh                         # copies all 181 skills to ~/.claude/skills
 ```
 
 Claude Code discovers skills one level deep (`~/.claude/skills/<skill>/SKILL.md`). The installer flattens `Skills/<category>/<skill>` for you.
@@ -194,7 +194,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | [Digital Forensics](#digital-forensics) | 9 | Windows, Linux, macOS, memory, timelines |
 | [Malware Analysis](#malware-analysis) | 6 | Static triage, dynamic analysis, malicious documents |
 | [Threat Intelligence](#threat-intelligence) | 3 | CTI, ATT&CK/D3FEND mapping, IOC management |
-| [Endpoint](#endpoint) | 6 | Windows event logs, Sysmon, Linux telemetry, EDR tuning, Windows hardening |
+| [Endpoint](#endpoint) | 7 | Windows event logs, Sysmon, Linux telemetry, EDR tuning, Windows hardening |
 | [Active Directory](#active-directory) | 3 | AD/AD CS hardening, attack detection, forest recovery |
 | [Identity](#identity) | 7 | Entra ID, secure auth implementation |
 | [Application Security](#application-security) | 6 | Secure code review, WAF, API security, SAST/DAST |
@@ -214,7 +214,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | [GRC](#grc) | 5 | Framework mapping, threat modeling & risk |
 | [Utility](#utility) | 2 | IR reporting, 30-minute compromise checks |
 | [Tools](#tools) | 23 | Doc-verified safe operation of 22 tool families + tool-safety umbrella |
-| **Total** | **180** | |
+| **Total** | **181** | |
 
 ---
 
@@ -388,6 +388,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 
 | Skill | What it covers |
 |---|---|
+| [`defensive-browser-security`](Skills/endpoint/defensive-browser-security/SKILL.md) | Extension governance post-MV2, Safe Browsing/ESM, App-Bound Encryption + DBSC vs cookie theft, ClickFix mitigations and RunMRU hunting |
 | [`defensive-edr-tuning`](Skills/endpoint/defensive-edr-tuning/SKILL.md) | Coverage, exclusion governance, tamper protection, EDR-blinding detection |
 | [`defensive-linux-telemetry`](Skills/endpoint/defensive-linux-telemetry/SKILL.md) | auditd rules, Falco/Tetragon, osquery, Linux detection catalog |
 | [`defensive-sysmon`](Skills/endpoint/defensive-sysmon/SKILL.md) | EID 1–29, config design, native Windows 11 Sysmon, Sysmon for Linux, volume control |
@@ -664,7 +665,7 @@ Run offensive techniques only in environments you are authorized to test.
 
 ```text
 claude-blue/
-├── Skills/<category>/<skill>/SKILL.md    # 180 skills in 32 categories
+├── Skills/<category>/<skill>/SKILL.md    # 181 skills in 32 categories
 ├── install.sh                            # flattening installer (copy/link, category/skill filters)
 ├── claude-skills.json                    # generated manifest
 ├── tools/check-skill.sh                  # linter (frontmatter, name/folder, description ≤1024, sections, fences)
@@ -687,7 +688,7 @@ claude-blue/
 | 2.5 | Identity & SaaS (PAM, phishing-resistant MFA, Okta, M365, Workspace, SaaS), forensics (disk, container, browser, email), malware (deobfuscation, RE, Linux), Linux/macOS hunts, IR readiness, web compromise, GRC (BCP/DR, policy, privacy), asset inventory, testing program, cloud data & serverless, human & physical, DB/mobile/web-server security | ✓ Complete (v1.2) |
 | 3 | `tests/`: sample logs with expected verdicts per skill for regression testing | Planned |
 | 4 | Tested Sigma rule pack with TP/FP samples and CI conversion to SPL/KQL/ES\|QL/YARA-L | Planned |
-| 6 | Endpoint & mobile: macOS hardening, application control, PowerShell security, browser security, MDM, mobile forensics | Planned |
+| 6 | Endpoint & mobile: macOS hardening, application control, PowerShell security, MDM, mobile forensics | Planned |
 | 7 | Hunting & IR depth: cloud/identity hunts, edge-device compromise, insider threat, data breach response, tabletop exercises | Planned |
 | 8 | Resilience & GRC: backup security, third-party risk, PQC crypto-agility, AD CS, virtualization, EASM | Planned |
 | 9 | Localized content: Philippine regulatory notes (Data Privacy Act/NPC, DICT/CERT-PH, BSP), APAC threat profiles | Planned |

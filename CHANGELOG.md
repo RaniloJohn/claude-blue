@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
+## [1.2.1] — 2026-10-25
+
+### Added
+- `defensive-browser-security`: extension governance after Chrome MV2 end (Chrome 139 / Web Store removal Aug 31, 2026), App-Bound Encryption and DBSC against cookie theft, Microsoft ClickFix mitigations and RunMRU hunting, macOS ClickFix variants (181 skills)
+
 ## [1.2.0] — 2026-10-24
 
 ### Added

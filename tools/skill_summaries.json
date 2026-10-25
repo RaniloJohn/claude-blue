@@ -17,6 +17,7 @@
  "defensive-bec-response": "AiTM token theft, inbox rules, OAuth grants, revocation order, payment recall",
  "defensive-blue-research": "Research-first methodology: source hierarchy, currency checks, Admiralty grading, lab validation, option analysis, cited recommendations",
  "defensive-browser-forensics": "Chromium/Firefox/Safari artifacts, SQL for visits/downloads, timestamp formats, extensions, cookie theft, ClickFix evidence",
+ "defensive-browser-security": "Extension governance post-MV2, Safe Browsing/ESM, App-Bound Encryption + DBSC vs cookie theft, ClickFix mitigations and RunMRU hunting",
  "defensive-cicd-hardening": "GitHub Actions hardening, pwn requests, cache poisoning, OIDC, trusted publishing",
  "defensive-cloud-data-security": "Macie/Purview/SDP, public-access prevention, CMK/key policies, SSE-C abuse, data perimeters (SCP/RCP/VPC-SC), snapshot controls",
  "defensive-cloud-ir": "AWS/Azure/GCP credential revocation, scoping, persistence, snapshots, GuardDuty attack sequences",

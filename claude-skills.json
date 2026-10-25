@@ -2,8 +2,8 @@
   "name": "claude-blue",
   "description": "Defensive security skills for Claude — SOC, detection engineering, threat hunting, DFIR, hardening.",
   "license": "MIT",
-  "generated": "2026-10-24",
-  "skill_count": 180,
+  "generated": "2026-10-25",
+  "skill_count": 181,
   "categories": [
     "active-directory",
     "ai",
@@ -177,7 +177,7 @@
       "category": "core",
       "path": "Skills/core/claude-blue/SKILL.md",
       "description": "Master blue-team skill and router for the claude-blue library. Turns Claude into Claude Blue: SOC L1 triage, L2 incident response and root cause analysis, L3 threat hunting and detection engineering, DFIR, defense architecture (defense in depth, zero trust, network security), research-first analysis, and safe tool operation. Use for any defensive security task: alerts, raw logs (EVTX, Sysmon, auditd, macOS unified logs, Zeek, Suricata, firewall, CloudTrail, Entra, GCP audit, Kubernetes audit), detections (Sigma, SPL, KQL, EQL, ES|QL, YARA, YARA-L, Suricata, Wazuh, Falco), hunts, forensic artifacts, vulnerability prioritization (CVSS v4, EPSS, KEV, SSVC), containment, hardening, and reports. Routes to the matching defensive-* skill and enforces evidence-first standards and output templates.",
-      "lines": 376
+      "lines": 377
     },
     {
       "name": "defensive-attack-mapping",
@@ -409,6 +409,13 @@
       "path": "Skills/email/defensive-phishing-triage/SKILL.md",
       "description": "Phishing email triage and response for SOC analysts: user-reported phish workflow, header analysis (Received chain, Return-Path, Reply-To, Authentication-Results, ARC), URL analysis (redirect chains, AiTM phishing kits like Evilginx/Tycoon-style, QR code phishing, CAPTCHA-gated pages, legitimate-service abuse), attachment triage, sandboxing with data-sharing caution, determining clicks/credential entry/execution, tenant-wide search and purge (Defender Threat Explorer, compliance search, Google Workspace investigation tool), blocking, user notification, and metrics. Use when handling reported or detected phishing.",
       "lines": 150
+    },
+    {
+      "name": "defensive-browser-security",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-browser-security/SKILL.md",
+      "description": "Enterprise browser security for Chrome, Edge, and Firefox: managed policies, extension governance after the Manifest V2 end (Chrome 139 removed the MV2 enterprise override; MV2 extensions removed from the Web Store Aug 31, 2026), extension allowlisting and blocklisting, Safe Browsing/SmartScreen and Enhanced Security Mode, session cookie theft defenses (Chrome App-Bound Encryption, Device Bound Session Credentials GA for Google accounts on Windows Chrome in 2026, Entra token protection), ClickFix and fake-CAPTCHA paste-and-run attacks with Microsoft-recommended mitigations and RunMRU hunting, macOS ClickFix variants, download and isolation controls, browser telemetry, and incident response for infostealer cookie theft. Use when hardening or monitoring enterprise browsers.",
+      "lines": 112
     },
     {
       "name": "defensive-edr-tuning",
