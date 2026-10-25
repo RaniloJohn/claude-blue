@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
+## [1.2.2] — 2026-10-25
+
+### Added
+- `defensive-cve-researcher`: researcher-side CVE workflow — authorization and legal limits (DOJ CFAA policy, PH RA 10175), patch-diff and variant analysis, lab validation with benign markers, CVSS 3.1/4.0 and CWE, CNA selection (CNA Rules v4.2.0), report writing, 90-day coordination (182 skills)
+
 ## [1.2.1] — 2026-10-25
 
 ### Added

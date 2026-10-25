@@ -9,10 +9,10 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-0a66c2"></a>
-  <img alt="skills 181" src="https://img.shields.io/badge/skills-181-1f6feb">
+  <img alt="skills 182" src="https://img.shields.io/badge/skills-182-1f6feb">
   <img alt="categories 32" src="https://img.shields.io/badge/categories-32-0e8a16">
   <img alt="MITRE ATT&CK v18" src="https://img.shields.io/badge/MITRE%20ATT%26CK-v18-informational">
-  <img alt="version 1.2.1" src="https://img.shields.io/badge/version-1.2.1-brightgreen">
+  <img alt="version 1.2.2" src="https://img.shields.io/badge/version-1.2.2-brightgreen">
   <a href="https://github.com/ranilojohn/claude-blue/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ranilojohn/claude-blue?style=social"></a>
   <a href="https://github.com/ranilojohn/claude-blue/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ranilojohn/claude-blue?style=social"></a>
 </p>
@@ -39,7 +39,7 @@
 
 `claude-blue` is a library of defensive security skills for [Claude Skills](https://docs.claude.com). It is the blue-team counterpart to [claude-red](https://github.com/SnailSploit/claude-red).
 
-- **181 skills in 32 categories.** Each skill covers one defensive surface.
+- **182 skills in 32 categories.** Each skill covers one defensive surface.
 - **One umbrella skill, `claude-blue`.** It sets operating standards, routes each task to the right specialist, and enforces fixed output templates.
 
 Skills load on demand from conversational triggers. For example, pasting a 4769 event loads `defensive-ad-detection`. Asking about a rogue router advertisement loads `defensive-ipv6-security`. Asking "should we deploy Velociraptor?" loads `defensive-blue-research` and `defensive-tool-velociraptor`. Context is spent only on what you use.
@@ -84,7 +84,7 @@ Skills load on demand from conversational triggers. For example, pasting a 4769 
 ```bash
 git clone https://github.com/ranilojohn/claude-blue
 cd claude-blue
-./install.sh                         # copies all 181 skills to ~/.claude/skills
+./install.sh                         # copies all 182 skills to ~/.claude/skills
 ```
 
 Claude Code discovers skills one level deep (`~/.claude/skills/<skill>/SKILL.md`). The installer flattens `Skills/<category>/<skill>` for you.
@@ -183,7 +183,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | Category | Skills | Focus |
 |---|---:|---|
 | [Core](#core) | 1 | Router, principles, workflows W1–W8, templates |
-| [Research](#research) | 1 | Research-first methodology, source grading, verification |
+| [Research](#research) | 2 | Research-first methodology, CVE research & coordinated disclosure |
 | [Defense Model](#defense-model) | 10 | Fundamentals, defense in depth, zero trust, architecture, kill chain, D3FEND, resilience |
 | [SOC Operations](#soc-operations) | 8 | Triage, log sources & parsing, playbooks, SOAR, SOC build, metrics, UEBA |
 | [Detection Engineering](#detection-engineering) | 5 | Sigma, YARA/YARA-X, Suricata/Snort, query languages, detection-as-code |
@@ -214,7 +214,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | [GRC](#grc) | 5 | Framework mapping, threat modeling & risk |
 | [Utility](#utility) | 2 | IR reporting, 30-minute compromise checks |
 | [Tools](#tools) | 23 | Doc-verified safe operation of 22 tool families + tool-safety umbrella |
-| **Total** | **181** | |
+| **Total** | **182** | |
 
 ---
 
@@ -235,6 +235,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | Skill | What it covers |
 |---|---|
 | [`defensive-blue-research`](Skills/research/defensive-blue-research/SKILL.md) | Research-first methodology: source hierarchy, currency checks, Admiralty grading, lab validation, option analysis, cited recommendations |
+| [`defensive-cve-researcher`](Skills/research/defensive-cve-researcher/SKILL.md) | Finding and responsibly disclosing OSS vulnerabilities for a CVE: legal limits, patch-diff/variant analysis, lab proof with benign markers, CVSS/CWE, CNA selection, reports, embargo |
 
 ### Defense Model
 
@@ -665,7 +666,7 @@ Run offensive techniques only in environments you are authorized to test.
 
 ```text
 claude-blue/
-├── Skills/<category>/<skill>/SKILL.md    # 181 skills in 32 categories
+├── Skills/<category>/<skill>/SKILL.md    # 182 skills in 32 categories
 ├── install.sh                            # flattening installer (copy/link, category/skill filters)
 ├── claude-skills.json                    # generated manifest
 ├── tools/check-skill.sh                  # linter (frontmatter, name/folder, description ≤1024, sections, fences)

@@ -13,7 +13,7 @@ SUMMARIES = json.loads((ROOT / "tools" / "skill_summaries.json").read_text())
 # (folder, display name, focus)
 CATEGORIES = [
     ("core", "Core", "Router, principles, workflows W1–W8, templates"),
-    ("research", "Research", "Research-first methodology, source grading, verification"),
+    ("research", "Research", "Research-first methodology, CVE research & coordinated disclosure"),
     ("defense-model", "Defense Model", "Fundamentals, defense in depth, zero trust, architecture, kill chain, D3FEND, resilience"),
     ("soc", "SOC Operations", "Triage, log sources & parsing, playbooks, SOAR, SOC build, metrics, UEBA"),
     ("detection", "Detection Engineering", "Sigma, YARA/YARA-X, Suricata/Snort, query languages, detection-as-code"),

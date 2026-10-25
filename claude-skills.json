@@ -3,7 +3,7 @@
   "description": "Defensive security skills for Claude — SOC, detection engineering, threat hunting, DFIR, hardening.",
   "license": "MIT",
   "generated": "2026-10-25",
-  "skill_count": 181,
+  "skill_count": 182,
   "categories": [
     "active-directory",
     "ai",
@@ -177,7 +177,7 @@
       "category": "core",
       "path": "Skills/core/claude-blue/SKILL.md",
       "description": "Master blue-team skill and router for the claude-blue library. Turns Claude into Claude Blue: SOC L1 triage, L2 incident response and root cause analysis, L3 threat hunting and detection engineering, DFIR, defense architecture (defense in depth, zero trust, network security), research-first analysis, and safe tool operation. Use for any defensive security task: alerts, raw logs (EVTX, Sysmon, auditd, macOS unified logs, Zeek, Suricata, firewall, CloudTrail, Entra, GCP audit, Kubernetes audit), detections (Sigma, SPL, KQL, EQL, ES|QL, YARA, YARA-L, Suricata, Wazuh, Falco), hunts, forensic artifacts, vulnerability prioritization (CVSS v4, EPSS, KEV, SSVC), containment, hardening, and reports. Routes to the matching defensive-* skill and enforces evidence-first standards and output templates.",
-      "lines": 377
+      "lines": 378
     },
     {
       "name": "defensive-attack-mapping",
@@ -934,6 +934,13 @@
       "path": "Skills/research/defensive-blue-research/SKILL.md",
       "description": "Research methodology for blue teams, applied before any defensive decision: framing the research question, source hierarchy (vendor docs and advisories, standards, CVE/KEV/PSIRT, release notes and source code, peer-reviewed and vendor research, community), verifying currency (versions, dates, changelogs, git tags), triangulating at least two independent sources, grading evidence (Admiralty/NATO reliability and credibility), lab reproduction and detection validation, analyzing applicability and impact in your environment, generating options with trade-offs, writing recommendations, and documenting with citations. Workflows for CVEs, tools, detections, threat actors, products, and AI-assisted research. Use whenever a defensive task depends on facts that may have changed.",
       "lines": 205
+    },
+    {
+      "name": "defensive-cve-researcher",
+      "category": "research",
+      "path": "Skills/research/defensive-cve-researcher/SKILL.md",
+      "description": "Finding, validating, and responsibly disclosing new vulnerabilities in open-source software to obtain a CVE: authorization and legal limits (DOJ CFAA good-faith policy, Philippines RA 10175, safe harbor), target selection, prior-art and patch-diff recon (GHSA, OSV, GitLab Advisory DB, git history), incomplete-fix and variant analysis (Semgrep, CodeQL, ripgrep), source-to-sink taint review per CWE class (XSS, SQLi, command injection, path traversal, SSRF, deserialization, IDOR, ReDoS), CVE-worthiness triage against CNA Operational Rules 4.2.0, isolated lab reproduction with benign markers and differential proof, CVSS 3.1/4.0 scoring, CWE 4.20 mapping, duplicate checks, CNA selection (vendor CNA, GitHub PVR/GHSA, VulDB, CERT/CC VINCE, MITRE CNA-LR), report and advisory writing, AI-assistance disclosure, embargo timelines (90-day norm, Project Zero 90+30), CVE record requirements, NVD enrichment limits, and publication. Use when hunting for or reporting a new vulnerability.",
+      "lines": 461
     },
     {
       "name": "defensive-crowdstrike-falcon",

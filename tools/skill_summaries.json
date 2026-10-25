@@ -26,6 +26,7 @@
  "defensive-crowdstrike-falcon": "Prevention & content-update rings, CQL hunting, custom IOAs, RTR live response, containment, exclusions, FalconPy",
  "defensive-cspm": "Prowler/Steampipe/native CSPM, toxic combinations, IaC scanning, drift",
  "defensive-cti": "PIRs, Diamond Model, TTP extraction, Admiralty code, estimative language, TLP 2.0",
+ "defensive-cve-researcher": "Finding and responsibly disclosing OSS vulnerabilities for a CVE: legal limits, patch-diff/variant analysis, lab proof with benign markers, CVSS/CWE, CNA selection, reports, embargo",
  "defensive-cyber-resilience": "NIST 800-160v2 goals & 14 techniques, minimum viable company, impact tolerances (DORA/UK), recovery engineering",
  "defensive-d3fend-countermeasures": "D3FEND tactics (Model→Restore), ATT&CK→artifact→countermeasure mappings, vendor comparison, gap analysis",
  "defensive-database-security": "Exposure/auth hardening per engine, least privilege, encryption, pgaudit/SQL Audit, detecting xp_cmdshell, dumps, SQLi",
