@@ -94,6 +94,7 @@ Load the specialist skill(s) matching the task. If a skill is not installed, app
 | Reports & post-mortems / 30-minute host checks | `defensive-ir-reporting` / `defensive-quick-checks` |
 | **Research methodology** (sources, currency, triangulation, lab validation, recommendations) | `defensive-blue-research` |
 | CVE research & coordinated disclosure (finding, validating, reporting new vulns) | `defensive-cve-researcher` |
+| Receiving vuln reports, PSIRT/VDP, CRA reporting, advisories & VEX for your own product | `defensive-psirt-disclosure-handling` |
 | **ATT&CK tactic detection packs** (TA0001–TA0011, TA0040) | `defensive-detect-initial-access` / `-execution` / `-persistence` / `-privilege-escalation` / `-defense-evasion` / `-credential-access` / `-discovery` / `-lateral-movement` / `-collection` / `-command-and-control` / `-exfiltration` / `-impact` |
 | **Defense model**: fundamentals / defense in depth / zero trust / architecture | `defensive-security-fundamentals` / `defensive-defense-in-depth` / `defensive-zero-trust-architecture` / `defensive-security-architecture` |
 | Kill chain & Diamond / threat-informed defense / D3FEND | `defensive-kill-chain-defense` / `defensive-threat-informed-defense` / `defensive-d3fend-countermeasures` |

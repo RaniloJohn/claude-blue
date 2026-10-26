@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
+## [1.2.3] — 2026-10-26
+
+### Added
+- `defensive-psirt-disclosure-handling`: vendor/maintainer side of CVD — ISO 29147/30111, FIRST PSIRT framework, security.txt, GitHub PVR, triage SLAs and AI-report floods, EU CRA Art. 14 reporting via ENISA SRP, CNA Rules v4.2.6 and CVE JSON 5.2.0 records, CSAF 2.0 and VEX advisories (183 skills)
+
 ## [1.2.2] — 2026-10-25
 
 ### Added

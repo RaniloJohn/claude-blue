@@ -105,6 +105,7 @@
  "defensive-policy-standards": "Policy/standard/procedure hierarchy, core policy set incl. AI use, testable requirements, ISO 27001:2022 mapping, exceptions",
  "defensive-privacy-data-protection": "Records of processing, minimization, DPIAs, pseudonymization, privacy in security monitoring, GDPR/PH DPA overview",
  "defensive-proxy-tls-inspection": "Explicit/transparent proxy, WPAD risk, SWG policy, TLS interception design & bypass, TLS 1.3/ECH/QUIC, proxy hunts",
+ "defensive-psirt-disclosure-handling": "Vendor/maintainer side of CVD: policy & safe harbor, security.txt, GitHub PVR, triage SLAs & AI-report floods, EU CRA 24h/72h reporting, CNA records, CSAF/VEX advisories",
  "defensive-purple-team": "Atomic Red Team, Caldera, outcome scoring, gap fixing, red↔blue pairing",
  "defensive-qradar": "DSMs & QIDs, AQL for events/flows, CRE rules & building blocks, reference sets, offense tuning, SaaS transition note",
  "defensive-query-languages": "SPL, KQL, EQL, ES\\|QL, Lucene, Wazuh XML, Graylog, Athena — operator map and patterns",

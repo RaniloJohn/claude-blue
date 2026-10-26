@@ -33,7 +33,7 @@ CATEGORIES = [
     ("cloud", "Cloud", "AWS, Azure, GCP, CSPM/IaC"),
     ("container", "Container & Kubernetes", "Container hardening, Kubernetes security"),
     ("supply-chain", "Supply Chain & CI/CD", "Pipeline hardening, secrets, SBOM/SLSA"),
-    ("vuln-mgmt", "Vulnerability Management", "Risk-based prioritization, patching"),
+    ("vuln-mgmt", "Vulnerability Management", "Risk-based prioritization, patching, asset inventory, testing programs, PSIRT & disclosure handling"),
     ("hardening", "Hardening", "Linux, Cisco/Huawei network devices"),
     ("email", "Email Security", "SPF/DKIM/DMARC, phishing triage"),
     ("deception", "Deception", "Honeytokens, honey accounts, honeypots"),

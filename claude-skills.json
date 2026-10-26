@@ -2,8 +2,8 @@
   "name": "claude-blue",
   "description": "Defensive security skills for Claude — SOC, detection engineering, threat hunting, DFIR, hardening.",
   "license": "MIT",
-  "generated": "2026-10-25",
-  "skill_count": 182,
+  "generated": "2026-10-26",
+  "skill_count": 183,
   "categories": [
     "active-directory",
     "ai",
@@ -177,7 +177,7 @@
       "category": "core",
       "path": "Skills/core/claude-blue/SKILL.md",
       "description": "Master blue-team skill and router for the claude-blue library. Turns Claude into Claude Blue: SOC L1 triage, L2 incident response and root cause analysis, L3 threat hunting and detection engineering, DFIR, defense architecture (defense in depth, zero trust, network security), research-first analysis, and safe tool operation. Use for any defensive security task: alerts, raw logs (EVTX, Sysmon, auditd, macOS unified logs, Zeek, Suricata, firewall, CloudTrail, Entra, GCP audit, Kubernetes audit), detections (Sigma, SPL, KQL, EQL, ES|QL, YARA, YARA-L, Suricata, Wazuh, Falco), hunts, forensic artifacts, vulnerability prioritization (CVSS v4, EPSS, KEV, SSVC), containment, hardening, and reports. Routes to the matching defensive-* skill and enforces evidence-first standards and output templates.",
-      "lines": 378
+      "lines": 379
     },
     {
       "name": "defensive-attack-mapping",
@@ -1284,6 +1284,13 @@
       "path": "Skills/vuln-mgmt/defensive-patch-management/SKILL.md",
       "description": "Patch and update operations: patch cadence (Microsoft Patch Tuesday, out-of-band, vendor PSIRT cycles), ring-based deployment (pilot, broad, critical), WSUS/Intune/Windows Autopatch, SCCM/ConfigMgr, Linux (unattended-upgrades, dnf-automatic, livepatch), macOS (MDM declarative updates), third-party apps, network/edge appliances and firmware, emergency patching for KEV/zero-days, verification and compliance reporting, rollback plans, and end-of-life tracking (e.g., Windows 10 end of support Oct 2025, ESU). Use when planning patch processes, responding to urgent vulnerabilities, or proving patch compliance.",
       "lines": 132
+    },
+    {
+      "name": "defensive-psirt-disclosure-handling",
+      "category": "vuln-mgmt",
+      "path": "Skills/vuln-mgmt/defensive-psirt-disclosure-handling/SKILL.md",
+      "description": "Running the vendor or maintainer side of coordinated vulnerability disclosure (PSIRT): CVD policy and safe harbor (ISO/IEC 29147:2018, 30111:2019, FIRST PSIRT Services Framework 1.1, disclose.io, DOJ 2022 CFAA policy), intake channels (RFC 9116 security.txt, GitHub Private Vulnerability Reporting, platforms), triage SLAs and AI-generated report floods, EU CRA Article 14 reporting via the ENISA Single Reporting Platform (24h/72h/14-day clocks since 11 Sep 2026), CVE assignment as a CNA (CNA Rules 4.2.6, CVE JSON 5.2.0) given reduced NVD enrichment, CVSS 4.0/SSVC supplier prioritization, fix and variant validation, CSAF 2.0 advisories and VEX, embargo and multi-party coordination, and PSIRT metrics. Use when receiving vulnerability reports about your own product or project, setting up a PSIRT or VDP, or publishing advisories.",
+      "lines": 230
     },
     {
       "name": "defensive-security-testing-program",
