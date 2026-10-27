@@ -8,6 +8,7 @@
  "defensive-ai-security": "OWASP LLM Top 10 2025, Agentic Top 10 2026, prompt injection, MCP, RAG, monitoring",
  "defensive-alert-triage": "Entity extraction, enrichment order, TP/BTP/FP verdicts, severity, escalation, closing notes",
  "defensive-api-security": "OWASP API Top 10, BOLA-safe patterns, schema validation, GraphQL, abuse detection",
+ "defensive-application-control": "App Control for Business (WDAC) base/supplemental policies, managed installer, block rules, CiTool/Intune, CodeIntegrity events, fapolicyd, Santa",
  "defensive-asset-inventory": "CIS 1–2 inventory from directory/MDM/EDR/cloud/DHCP/NAC/scans, gap queries, attributes, software inventory, KPIs",
  "defensive-attack-mapping": "ATT&CK v18 structure, coverage scoring, Navigator layers, D3FEND 1.0",
  "defensive-auth-implementation": "OAuth 2.x/OIDC, JWT validation, SAML, sessions, passwords/MFA, negative tests",

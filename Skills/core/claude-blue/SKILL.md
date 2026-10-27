@@ -76,6 +76,7 @@ Load the specialist skill(s) matching the task. If a skill is not installed, app
 | Windows event IDs, Kerberos/NTLM, ETW/AMSI | `defensive-windows-event-logs` |
 | Sysmon / Linux telemetry (auditd, eBPF) | `defensive-sysmon` / `defensive-linux-telemetry` |
 | EDR tuning & blinding detection / Windows hardening | `defensive-edr-tuning` / `defensive-windows-hardening` |
+| App Control for Business (WDAC), AppLocker, managed installer, fapolicyd, Santa allowlisting | `defensive-application-control` |
 | AD hardening & AD CS / AD attack detection | `defensive-ad-hardening` / `defensive-ad-detection` |
 | Entra ID / app auth (OAuth, JWT, SAML) | `defensive-entra-id` / `defensive-auth-implementation` |
 | Secure code / WAF / API / SAST-DAST | `defensive-secure-code-review` / `defensive-waf` / `defensive-api-security` / `defensive-sast-dast` |

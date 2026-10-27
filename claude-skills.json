@@ -2,8 +2,8 @@
   "name": "claude-blue",
   "description": "Defensive security skills for Claude — SOC, detection engineering, threat hunting, DFIR, hardening.",
   "license": "MIT",
-  "generated": "2026-10-26",
-  "skill_count": 183,
+  "generated": "2026-10-27",
+  "skill_count": 184,
   "categories": [
     "active-directory",
     "ai",
@@ -177,7 +177,7 @@
       "category": "core",
       "path": "Skills/core/claude-blue/SKILL.md",
       "description": "Master blue-team skill and router for the claude-blue library. Turns Claude into Claude Blue: SOC L1 triage, L2 incident response and root cause analysis, L3 threat hunting and detection engineering, DFIR, defense architecture (defense in depth, zero trust, network security), research-first analysis, and safe tool operation. Use for any defensive security task: alerts, raw logs (EVTX, Sysmon, auditd, macOS unified logs, Zeek, Suricata, firewall, CloudTrail, Entra, GCP audit, Kubernetes audit), detections (Sigma, SPL, KQL, EQL, ES|QL, YARA, YARA-L, Suricata, Wazuh, Falco), hunts, forensic artifacts, vulnerability prioritization (CVSS v4, EPSS, KEV, SSVC), containment, hardening, and reports. Routes to the matching defensive-* skill and enforces evidence-first standards and output templates.",
-      "lines": 379
+      "lines": 380
     },
     {
       "name": "defensive-attack-mapping",
@@ -409,6 +409,13 @@
       "path": "Skills/email/defensive-phishing-triage/SKILL.md",
       "description": "Phishing email triage and response for SOC analysts: user-reported phish workflow, header analysis (Received chain, Return-Path, Reply-To, Authentication-Results, ARC), URL analysis (redirect chains, AiTM phishing kits like Evilginx/Tycoon-style, QR code phishing, CAPTCHA-gated pages, legitimate-service abuse), attachment triage, sandboxing with data-sharing caution, determining clicks/credential entry/execution, tenant-wide search and purge (Defender Threat Explorer, compliance search, Google Workspace investigation tool), blocking, user notification, and metrics. Use when handling reported or detected phishing.",
       "lines": 150
+    },
+    {
+      "name": "defensive-application-control",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-application-control/SKILL.md",
+      "description": "Application allowlisting end to end: App Control for Business (formerly WDAC) policy design (base vs supplemental, Multiple Policy Format, rule levels, rule options 3/13/14/17), managed installer (Intune Management Extension, ConfigMgr) and ISG, Microsoft recommended block rules for LOLBins (mshta, msbuild, wmic, WSL, debuggers), vulnerable driver blocklist, deployment via Intune ApplicationControl CSP, CiTool and Group Policy limits, AppLocker as complement (not an MSRC security boundary), Smart App Control, PowerShell Constrained Language Mode, CodeIntegrity events 3076/3077/3089/3090-3092 and AppLocker 8028/8029, KQL hunting, audit-to-enforce rollout, Linux fapolicyd and macOS Santa. Use when designing, rolling out, tuning, or troubleshooting application control.",
+      "lines": 251
     },
     {
       "name": "defensive-browser-security",

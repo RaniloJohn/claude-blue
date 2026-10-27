@@ -24,7 +24,7 @@ CATEGORIES = [
     ("forensics", "Digital Forensics", "Windows, Linux, macOS, memory, timelines"),
     ("malware", "Malware Analysis", "Static triage, dynamic analysis, malicious documents"),
     ("cti", "Threat Intelligence", "CTI, ATT&CK/D3FEND mapping, IOC management"),
-    ("endpoint", "Endpoint", "Windows event logs, Sysmon, Linux telemetry, EDR tuning, Windows hardening"),
+    ("endpoint", "Endpoint", "Windows event logs, Sysmon, Linux telemetry, EDR tuning, Windows hardening, application control"),
     ("active-directory", "Active Directory", "AD/AD CS hardening, attack detection, forest recovery"),
     ("identity", "Identity", "Entra ID, secure auth implementation"),
     ("appsec", "Application Security", "Secure code review, WAF, API security, SAST/DAST"),

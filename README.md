@@ -9,10 +9,10 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-0a66c2"></a>
-  <img alt="skills 183" src="https://img.shields.io/badge/skills-183-1f6feb">
+  <img alt="skills 184" src="https://img.shields.io/badge/skills-184-1f6feb">
   <img alt="categories 32" src="https://img.shields.io/badge/categories-32-0e8a16">
   <img alt="MITRE ATT&CK v18" src="https://img.shields.io/badge/MITRE%20ATT%26CK-v18-informational">
-  <img alt="version 1.2.3" src="https://img.shields.io/badge/version-1.2.3-brightgreen">
+  <img alt="version 1.2.4" src="https://img.shields.io/badge/version-1.2.4-brightgreen">
   <a href="https://github.com/ranilojohn/claude-blue/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ranilojohn/claude-blue?style=social"></a>
   <a href="https://github.com/ranilojohn/claude-blue/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/ranilojohn/claude-blue?style=social"></a>
 </p>
@@ -39,7 +39,7 @@
 
 `claude-blue` is a library of defensive security skills for [Claude Skills](https://docs.claude.com). It is the blue-team counterpart to [claude-red](https://github.com/SnailSploit/claude-red).
 
-- **183 skills in 32 categories.** Each skill covers one defensive surface.
+- **184 skills in 32 categories.** Each skill covers one defensive surface.
 - **One umbrella skill, `claude-blue`.** It sets operating standards, routes each task to the right specialist, and enforces fixed output templates.
 
 Skills load on demand from conversational triggers. For example, pasting a 4769 event loads `defensive-ad-detection`. Asking about a rogue router advertisement loads `defensive-ipv6-security`. Asking "should we deploy Velociraptor?" loads `defensive-blue-research` and `defensive-tool-velociraptor`. Context is spent only on what you use.
@@ -84,7 +84,7 @@ Skills load on demand from conversational triggers. For example, pasting a 4769 
 ```bash
 git clone https://github.com/ranilojohn/claude-blue
 cd claude-blue
-./install.sh                         # copies all 183 skills to ~/.claude/skills
+./install.sh                         # copies all 184 skills to ~/.claude/skills
 ```
 
 Claude Code discovers skills one level deep (`~/.claude/skills/<skill>/SKILL.md`). The installer flattens `Skills/<category>/<skill>` for you.
@@ -194,7 +194,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | [Digital Forensics](#digital-forensics) | 9 | Windows, Linux, macOS, memory, timelines |
 | [Malware Analysis](#malware-analysis) | 6 | Static triage, dynamic analysis, malicious documents |
 | [Threat Intelligence](#threat-intelligence) | 3 | CTI, ATT&CK/D3FEND mapping, IOC management |
-| [Endpoint](#endpoint) | 7 | Windows event logs, Sysmon, Linux telemetry, EDR tuning, Windows hardening |
+| [Endpoint](#endpoint) | 8 | Windows event logs, Sysmon, Linux telemetry, EDR tuning, Windows hardening, application control |
 | [Active Directory](#active-directory) | 3 | AD/AD CS hardening, attack detection, forest recovery |
 | [Identity](#identity) | 7 | Entra ID, secure auth implementation |
 | [Application Security](#application-security) | 6 | Secure code review, WAF, API security, SAST/DAST |
@@ -214,7 +214,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 | [GRC](#grc) | 5 | Framework mapping, threat modeling & risk |
 | [Utility](#utility) | 2 | IR reporting, 30-minute compromise checks |
 | [Tools](#tools) | 23 | Doc-verified safe operation of 22 tool families + tool-safety umbrella |
-| **Total** | **183** | |
+| **Total** | **184** | |
 
 ---
 
@@ -389,6 +389,7 @@ Every layer is mapped to **NIST CSF 2.0** (Govern, Identify, Protect, Detect, Re
 
 | Skill | What it covers |
 |---|---|
+| [`defensive-application-control`](Skills/endpoint/defensive-application-control/SKILL.md) | App Control for Business (WDAC) base/supplemental policies, managed installer, block rules, CiTool/Intune, CodeIntegrity events, fapolicyd, Santa |
 | [`defensive-browser-security`](Skills/endpoint/defensive-browser-security/SKILL.md) | Extension governance post-MV2, Safe Browsing/ESM, App-Bound Encryption + DBSC vs cookie theft, ClickFix mitigations and RunMRU hunting |
 | [`defensive-edr-tuning`](Skills/endpoint/defensive-edr-tuning/SKILL.md) | Coverage, exclusion governance, tamper protection, EDR-blinding detection |
 | [`defensive-linux-telemetry`](Skills/endpoint/defensive-linux-telemetry/SKILL.md) | auditd rules, Falco/Tetragon, osquery, Linux detection catalog |
@@ -667,7 +668,7 @@ Run offensive techniques only in environments you are authorized to test.
 
 ```text
 claude-blue/
-├── Skills/<category>/<skill>/SKILL.md    # 183 skills in 32 categories
+├── Skills/<category>/<skill>/SKILL.md    # 184 skills in 32 categories
 ├── install.sh                            # flattening installer (copy/link, category/skill filters)
 ├── claude-skills.json                    # generated manifest
 ├── tools/check-skill.sh                  # linter (frontmatter, name/folder, description ≤1024, sections, fences)

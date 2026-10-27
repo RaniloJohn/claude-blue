@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
+## [1.2.4] — 2026-10-27
+
+### Added
+- `defensive-application-control`: App Control for Business (WDAC) base/supplemental policy design, rule options, managed installer and ISG, recommended block rules and driver blocklist, Intune CSP/CiTool deployment, AppLocker and Smart App Control, PowerShell CLM, CodeIntegrity/AppLocker events and KQL, fapolicyd, Santa, exception workflow (184 skills)
+
 ## [1.2.3] — 2026-10-26
 
 ### Added
