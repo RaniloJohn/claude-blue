@@ -2,8 +2,8 @@
   "name": "claude-blue",
   "description": "Defensive security skills for Claude — SOC, detection engineering, threat hunting, DFIR, hardening.",
   "license": "MIT",
-  "generated": "2026-10-27",
-  "skill_count": 184,
+  "generated": "2026-11-01",
+  "skill_count": 185,
   "categories": [
     "active-directory",
     "ai",
@@ -177,7 +177,7 @@
       "category": "core",
       "path": "Skills/core/claude-blue/SKILL.md",
       "description": "Master blue-team skill and router for the claude-blue library. Turns Claude into Claude Blue: SOC L1 triage, L2 incident response and root cause analysis, L3 threat hunting and detection engineering, DFIR, defense architecture (defense in depth, zero trust, network security), research-first analysis, and safe tool operation. Use for any defensive security task: alerts, raw logs (EVTX, Sysmon, auditd, macOS unified logs, Zeek, Suricata, firewall, CloudTrail, Entra, GCP audit, Kubernetes audit), detections (Sigma, SPL, KQL, EQL, ES|QL, YARA, YARA-L, Suricata, Wazuh, Falco), hunts, forensic artifacts, vulnerability prioritization (CVSS v4, EPSS, KEV, SSVC), containment, hardening, and reports. Routes to the matching defensive-* skill and enforces evidence-first standards and output templates.",
-      "lines": 380
+      "lines": 381
     },
     {
       "name": "defensive-attack-mapping",
@@ -437,6 +437,13 @@
       "path": "Skills/endpoint/defensive-linux-telemetry/SKILL.md",
       "description": "Linux security telemetry and detection: auditd rules and syscall auditing (execve, ptrace, module load, identity files), audit log parsing (ausearch, aureport, laurel for JSON), eBPF sensors (Falco, Tetragon TracingPolicy, Tracee, bcc tools), Sysmon for Linux, osquery, journald/rsyslog/auth.log/PAM, detecting reverse shells, privilege escalation, persistence (cron/systemd/ssh keys/ld.so.preload), container and namespace escape, cryptominers, and web shells. Use when instrumenting Linux servers or writing Linux detections.",
       "lines": 179
+    },
+    {
+      "name": "defensive-powershell-security",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-powershell-security/SKILL.md",
+      "description": "PowerShell defense end to end: logging (script block 4104, module 4103, transcription, Protected Event Logging with CMS certificates), Windows PowerShell 5.1 vs PowerShell 7 log channels and powershell.config.json, PowerShell 2.0 removal from Windows 11 24H2/Server 2025 and downgrade-attack checks (event 400 EngineVersion), Constrained Language Mode enforced by App Control/AppLocker, AMSI and Defender ASR obfuscated-script rule, JEA endpoints (role capability, virtual accounts, gMSA), execution policy limits, remoting/WinRM hardening, PowerShell 7 lifecycle (7.6 LTS; 7.4/7.5 EOS 2026-11-10), detection queries (KQL, SPL, Sigma) for encoded commands, download cradles, AMSI bypass and log tampering. Use when hardening, logging, hunting, or investigating PowerShell.",
+      "lines": 285
     },
     {
       "name": "defensive-sysmon",

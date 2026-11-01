@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
+## [1.2.5] — 2026-11-01
+
+### Added
+- `defensive-powershell-security`: PowerShell 5.1 vs 7 logging (4104/4103/400, powershell.config.json, Protected Event Logging), PowerShell 2.0 removal and downgrade detection, App Control-enforced CLM, AMSI and ASR obfuscation rule, JEA endpoints and escape routes, WinRM hardening, 7.x lifecycle, KQL/SPL/Sigma detections (185 skills)
+
 ## [1.2.4] — 2026-10-27
 
 ### Added

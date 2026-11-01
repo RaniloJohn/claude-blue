@@ -104,6 +104,7 @@
  "defensive-phishing-triage": "Header/URL analysis, AiTM & quishing, scope, purge, verdict notes",
  "defensive-physical-security": "Layered physical controls, modern badges, rogue devices/jacks, media sanitization (800-88), badge logs in SIEM",
  "defensive-policy-standards": "Policy/standard/procedure hierarchy, core policy set incl. AI use, testable requirements, ISO 27001:2022 mapping, exceptions",
+ "defensive-powershell-security": "PowerShell 5.1/7 script block, module and protected logging, PS 2.0 downgrade removal, CLM, AMSI/ASR, JEA endpoints, remoting hardening, KQL/SPL/Sigma detections",
  "defensive-privacy-data-protection": "Records of processing, minimization, DPIAs, pseudonymization, privacy in security monitoring, GDPR/PH DPA overview",
  "defensive-proxy-tls-inspection": "Explicit/transparent proxy, WPAD risk, SWG policy, TLS interception design & bypass, TLS 1.3/ECH/QUIC, proxy hunts",
  "defensive-psirt-disclosure-handling": "Vendor/maintainer side of CVD: policy & safe harbor, security.txt, GitHub PVR, triage SLAs & AI-report floods, EU CRA 24h/72h reporting, CNA records, CSAF/VEX advisories",
