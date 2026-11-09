@@ -2,8 +2,8 @@
   "name": "claude-blue",
   "description": "Defensive security skills for Claude — SOC, detection engineering, threat hunting, DFIR, hardening.",
   "license": "MIT",
-  "generated": "2026-11-01",
-  "skill_count": 185,
+  "generated": "2026-11-09",
+  "skill_count": 186,
   "categories": [
     "active-directory",
     "ai",
@@ -177,7 +177,7 @@
       "category": "core",
       "path": "Skills/core/claude-blue/SKILL.md",
       "description": "Master blue-team skill and router for the claude-blue library. Turns Claude into Claude Blue: SOC L1 triage, L2 incident response and root cause analysis, L3 threat hunting and detection engineering, DFIR, defense architecture (defense in depth, zero trust, network security), research-first analysis, and safe tool operation. Use for any defensive security task: alerts, raw logs (EVTX, Sysmon, auditd, macOS unified logs, Zeek, Suricata, firewall, CloudTrail, Entra, GCP audit, Kubernetes audit), detections (Sigma, SPL, KQL, EQL, ES|QL, YARA, YARA-L, Suricata, Wazuh, Falco), hunts, forensic artifacts, vulnerability prioritization (CVSS v4, EPSS, KEV, SSVC), containment, hardening, and reports. Routes to the matching defensive-* skill and enforces evidence-first standards and output templates.",
-      "lines": 381
+      "lines": 382
     },
     {
       "name": "defensive-attack-mapping",
@@ -437,6 +437,13 @@
       "path": "Skills/endpoint/defensive-linux-telemetry/SKILL.md",
       "description": "Linux security telemetry and detection: auditd rules and syscall auditing (execve, ptrace, module load, identity files), audit log parsing (ausearch, aureport, laurel for JSON), eBPF sensors (Falco, Tetragon TracingPolicy, Tracee, bcc tools), Sysmon for Linux, osquery, journald/rsyslog/auth.log/PAM, detecting reverse shells, privilege escalation, persistence (cron/systemd/ssh keys/ld.so.preload), container and namespace escape, cryptominers, and web shells. Use when instrumenting Linux servers or writing Linux detections.",
       "lines": 179
+    },
+    {
+      "name": "defensive-macos-hardening",
+      "category": "endpoint",
+      "path": "Skills/endpoint/defensive-macos-hardening/SKILL.md",
+      "description": "macOS fleet hardening and detection: current release tracking (Golden Gate 27, Tahoe 26, Sequoia 15), declarative software update enforcement (legacy MDM update management removed in 27), mSCP baselines (CIS, NIST 800-53/171, DISA STIG) via mscp.py, SIP, FileVault escrow and bootstrap token, Gatekeeper/notarization and quarantine, XProtect, Lockdown Mode, application firewall, PPPC/TCC profiles (tccutil list, Accessibility key deprecation), Background Task Management, standard-user admin elevation, Platform SSO, Santa allowlisting, Endpoint Security/eslogger and unified log telemetry, and infostealer detection (AMOS, MacSync, Odyssey; ClickFix Terminal and applescript:// lures, osascript password phishing, hdiutil, LaunchAgent persistence). Use when hardening Macs, building MDM baselines, or detecting macOS threats.",
+      "lines": 240
     },
     {
       "name": "defensive-powershell-security",

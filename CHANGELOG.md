@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow SemVer.
 
+## [1.2.6] — 2026-11-09
+
+### Added
+- `defensive-macos-hardening`: macOS Golden Gate 27 / Tahoe 26 / Sequoia 15 patch tracking and declarative software update enforcement (legacy MDM update management removed in 27), mSCP baselines, SIP/FileVault/bootstrap token/Gatekeeper/XProtect checks, admin elevation and Platform SSO, Santa and TCC/PPPC, Background Task Management, Endpoint Security and unified log telemetry, AMOS/MacSync/ClickFix infostealer detections (KQL, Sigma, osquery) and response (186 skills)
+
 ## [1.2.5] — 2026-11-01
 
 ### Added

@@ -78,6 +78,7 @@ Load the specialist skill(s) matching the task. If a skill is not installed, app
 | EDR tuning & blinding detection / Windows hardening | `defensive-edr-tuning` / `defensive-windows-hardening` |
 | App Control for Business (WDAC), AppLocker, managed installer, fapolicyd, Santa allowlisting | `defensive-application-control` |
 | PowerShell logging (4104/4103), CLM, AMSI, JEA, PS 2.0 downgrade, remoting hardening | `defensive-powershell-security` |
+| macOS hardening: DDM updates, mSCP baselines, FileVault/Gatekeeper/TCC, infostealer detection | `defensive-macos-hardening` |
 | AD hardening & AD CS / AD attack detection | `defensive-ad-hardening` / `defensive-ad-detection` |
 | Entra ID / app auth (OAuth, JWT, SAML) | `defensive-entra-id` / `defensive-auth-implementation` |
 | Secure code / WAF / API / SAST-DAST | `defensive-secure-code-review` / `defensive-waf` / `defensive-api-security` / `defensive-sast-dast` |

@@ -85,6 +85,7 @@
  "defensive-log-sources": "Audit policy, Sysmon, cloud logs, schemas (ECS/CIM/ASIM/OCSF/UDM), retention, silent-source alerts",
  "defensive-m365-security": "ScubaGear/Maester baselines, EXO presets, SMTP AUTH default-off end-2026, sharing/consent, audit retention, BEC detections",
  "defensive-macos-forensics": "Unified Log, eslogger/ESF, BTM, TCC, quarantine, infostealer patterns",
+ "defensive-macos-hardening": "macOS 27/26/15 patching via DDM, mSCP baselines, SIP/FileVault/Gatekeeper/XProtect, TCC/PPPC, BTM, Santa, ES telemetry, AMOS/MacSync infostealer detection",
  "defensive-maldoc-analysis": "Office/RTF/PDF/LNK/ISO/OneNote/HTML smuggling/SVG lure analysis",
  "defensive-malware-triage": "PE structure, FLOSS, capa, packers, script deobfuscation, deliverables",
  "defensive-memory-forensics": "Volatility 3 process/injection/network analysis, MemProcFS",
